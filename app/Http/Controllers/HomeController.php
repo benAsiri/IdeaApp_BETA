@@ -30,7 +30,15 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		return view('pages.admin.adminIndexPage');
 	}
 
+	/**
+	 * @return mixed
+     */
+	public function loadProfile()
+	{
+		$user = \Auth::user();
+		return view('profile')->with('user',$user);
+	}
 }

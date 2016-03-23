@@ -3,7 +3,7 @@
  * ----------
  */
 .skin-blue .main-header .navbar {
-  background-color: #3c8dbc;
+  background-color: #45bc3c;
 }
 .skin-blue .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -16,13 +16,13 @@
 .skin-blue .main-header .navbar .nav .open > a:focus,
 .skin-blue .main-header .navbar .nav > .active > a {
   background: rgba(0, 0, 0, 0.1);
-  color: #f6f6f6;
+  color: #00c0ef;
 }
 .skin-blue .main-header .navbar .sidebar-toggle {
-  color: #ffffff;
+  color: #00c0ef;
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-  color: #f6f6f6;
+  color: #00c0ef;
   background: rgba(0, 0, 0, 0.1);
 }
 .skin-blue .main-header .navbar .sidebar-toggle {
