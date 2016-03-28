@@ -139,7 +139,13 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="{{ asset('/admin/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-                            <span class="hidden-xs">{{Auth::user()->fname." ".Auth::user()->lname}}</span>
+                            @if(Auth::user())
+                                <span class="hidden-xs">{{Auth::user()->fname." ".Auth::user()->lname}}</span>
+
+                            @else
+                                <span class="hidden-xs">Guest</span>
+
+                            @endif
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -194,7 +200,11 @@
                     <img src="{{ asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>{{Auth::user()->fname." ".Auth::user()->lname}}</p>
+                    @if(Auth::user())
+                        <p>{{Auth::user()->fname." ".Auth::user()->lname}}</p>
+                    @else
+                        <p>Guest</p>
+                    @endif
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
