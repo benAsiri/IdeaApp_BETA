@@ -17,68 +17,119 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="{{asset('/admin/plugins/iCheck/square/blue.css')}}">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{asset('/admin/index2.html')}}"><b>Think</b>IT</a>
+        <a href=""><b>Think</b>IT</a>
 
-    </div><!-- /.login-logo -->
+    </div>
+    <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">Share your IDEAS</p>
+
+
         <form class="form-horizontal" role="form" method="POST" action="/auth/login">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                <input type="email" placeholder="EMAIL" class="form-control" name="email" value="{{ old('email') }}">
 
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
 
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" name="password">
+                <input type="password" placeholder="PASSWORD" class="form-control" name="password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
 
-
             <div class="row">
-                <div class="col-xs-8">
-                    <div class="checkbox icheck">
+                <div class="row">
+
+                    <div class="col-xs-8">
+                        <div class="checkbox icheck">
                             <label>
                                 <input type="checkbox" name="remember"> Remember Me
                             </label>
 
+                            <div class="col-xs-12">
+                                <br>
+                                <div class="container">
+                                    <div class="row">
+                                        @if (count($errors) > 0)
+                                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        @endif
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                </div><!-- /.col -->
-                <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary" style="margin-right: 15px;"> Login</button>
-                </div><!-- /.col -->
+                    <!-- /.col -->
+                    <div class="col-xs-3">
+                        <div class="col-xs-4">
+                            <div class="col-xs-4">
+                                <button type="submit" class="btn btn-primary" style="margin-right: 50px;">Login</button>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+
+
+                    </div>
+                </div>
+
             </div>
+
         </form>
 
-        <div class="social-auth-links text-center">
-            <p>- OR -</p>
-            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
-            <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
+
+        {{--
+              <div class="social-auth-links text-center">
+
+
+
+                   <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
+                  <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
+
+
         </div><!-- /.social-auth-links -->
+        --}}
 
-        <a href="/password/email">Forgot Your Password?</a>
-        <a href="register.html" class="text-center">Register a new membership</a>
+        <div>
+            <p>
 
-    </div><!-- /.login-box-body -->
-</div><!-- /.login-box -->
+
+            </p>
+        </div>
+
+        <a href="{{asset('/emails/password')}}">Forgot Your Password?</a>
+        <a href="{{asset('/auth/register')}}" class="text-center">Register a new membership</a>
+
+    </div>
+    <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
 
 <!-- jQuery 2.1.4 -->
-<script src="{{asset('admin/plugins/jQuery/jQuery-2.1.4.min.js')}}"></script>
+<script src="{{asset('/admin/plugins/jQuery/jQuery-2.1.4.min.js')}}"></script>
 <!-- Bootstrap 3.3.5 -->
-<script src="{{asset('admin/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('/admin/bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- iCheck -->
-<script src="{{asset('admin/plugins/iCheck/icheck.min.js')}}"></script>
+<script src="{{asset('/admin/plugins/iCheck/icheck.min.js')}}"></script>
+
+
 <script>
     $(function () {
         $('input').iCheck({
@@ -88,5 +139,7 @@
         });
     });
 </script>
+
+
 </body>
 </html>
