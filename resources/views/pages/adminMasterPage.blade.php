@@ -394,7 +394,10 @@
 
         </section>
 
-        <!-- Main content -->
+        <!-- Main content< -->
+
+
+
         <section class="content">
             @yield('content')
 
