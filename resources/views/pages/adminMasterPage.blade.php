@@ -140,11 +140,9 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="{{ asset('/admin/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
                             @if(Auth::user())
-                                <span class="hidden-xs">{{Auth::user()->fname." ".Auth::user()->lname}}</span>
-
+                                  <span class="hidden-xs">{{Auth::user()->fname." ".Auth::user()->lname}}</span>
                             @else
                                 <span class="hidden-xs">Guest</span>
-
                             @endif
                         </a>
                         <ul class="dropdown-menu">
@@ -152,8 +150,7 @@
                             <li class="user-header">
                                 <img src="{{ asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                                 <p>
-                                    Alexander Pierce - Web Developer
-                                    <small>Member since Nov. 2012</small>
+                                    <span>{{"I AM"." ".Auth::user()->name}}</span>
                                 </p>
                             </li>
                             <!-- Menu Body -->
@@ -236,7 +233,7 @@
                 <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Labs</span></a></li>
 
                 <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Food and Cafeteria</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Parental Service</span></a></li>
+                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Parental Services</span></a></li>
                 <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Preffects</span></a></li>
 
             </ul>

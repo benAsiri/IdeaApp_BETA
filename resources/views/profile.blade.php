@@ -4,28 +4,15 @@
 
     {{--comment short cut ( ctrl + /)--}}
     @parent
-
-
-
 @stop
 {{--meh section eke end eka --}}
 
-@section('content_header')
-
-
-    <h1>
-        User Profile
-    </h1>
-    <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">User profile</li>
-    </ol>
-
+{{--@section('content_header')--}}
+    <h1>MY PROFILE</h1>
 @stop
 
-@section('content')
 
+@section('content')
 
     {{--new content ares 2--}}
     <link href="{{ asset('css/FrontEnd_css/wall.css') }}" rel="stylesheet" type="text/css" >
@@ -80,23 +67,20 @@
 
                     <p class="text-muted">Malibu, California</p>
 
-                    <hr>
 
-                    <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+                    {{--
+                        <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
 
-                    <p>
-                        <span class="label label-danger">UI Design</span>
-                        <span class="label label-success">Coding</span>
-                        <span class="label label-info">Javascript</span>
-                        <span class="label label-warning">PHP</span>
-                        <span class="label label-primary">Node.js</span>
-                    </p>
 
-                    <hr>
+                                        <p>
+                                            <span class="label label-danger">UI Design</span>
+                                            <span class="label label-success">Coding</span>
+                                            <span class="label label-info">Javascript</span>
+                                            <span class="label label-warning">PHP</span>
+                                            <span class="label label-primary">Node.js</span>
+                                        </p>
+                    --}}
 
-                    <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -104,15 +88,7 @@
         </div>
         <!-- /.col -->
         <div class="col-md-9">
-
-            <! <div class="nav-tabs-custom">
-
-
-
-                    <div class="page-header">
-                        <h1 id="timeline">Timeline</h1>
-                    </div>
-
+          <div>
                     <ul class="timeline">
                         <li>
                             <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
