@@ -30,7 +30,7 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('auth.login');
+		return view('pages.adminMasterPage');
 	}
 
 	/**
@@ -39,6 +39,7 @@ class HomeController extends Controller {
 	public function loadProfile()
 	{
 		$user = \Auth::user();
+
 		return view('profile')->with('user',$user);
 	}
 
@@ -48,5 +49,10 @@ class HomeController extends Controller {
 
 	public function registerMe(){
 		return view('auth.register');
+	}
+
+	public function logoutMe(){
+		\Auth::logout(); // clear the session that i have already logged in
+		return view('auth.login');
 	}
 }

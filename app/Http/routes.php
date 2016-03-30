@@ -17,6 +17,8 @@ Route::get('home', 'HomeController@index');
 
 Route::get('profile','HomeController@loadProfile');
 
+Route::get('logout', 'HomeController@logoutMe');
+
 Route::get('email' , 'HomeController@resetPassword');
 
 Route::get('register', 'HomeController@registerMe');

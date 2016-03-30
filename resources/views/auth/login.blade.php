@@ -31,7 +31,7 @@
         <a href=""><b>Think</b>IT</a>
 
     </div>
-    <!-- /.login-logo -->
+
     <div class="login-box-body">
         <p class="login-box-msg">Share your IDEAS</p>
 
