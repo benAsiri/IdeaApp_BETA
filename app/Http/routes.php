@@ -23,6 +23,9 @@ Route::get('email' , 'HomeController@resetPassword');
 
 Route::get('register', 'HomeController@registerMe');
 
+
+
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
