@@ -220,21 +220,21 @@
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
 
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Administrative</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Payments</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Student Affrairs</span></a></li>
+                <li><a href="#"><i class="fa fa-hand-o-right"></i><span>Administrative</span></a></li>
+                <li><a href="#"><i class="fa fa-usd"></i><span>Payments</span></a></li>
+                <li><a href="#"><i class="fa fa-child"></i><span>Student Affrairs</span></a></li>
 
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Acedemic Division</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Places insight</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Office Staff</span></a></li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i><span>Acedemic Division</span></a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i><span>Places insight</span></a></li>
+                <li><a href="#"><i class="fa fa-users"></i></i><span>Office Staff</span></a></li>
 
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Teachers</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Cleaning Services</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Labs</span></a></li>
+                <li><a href="#"><i class="fa fa-street-view"></i><span>Teachers</span></a></li>
+                <li><a href="#"><i class="fa fa-history"></i><span>Cleaning Services</span></a></li>
+                <li><a href="#"><i class="fa fa-database"></i><span>Labs</span></a></li>
 
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Food and Cafeteria</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Parental Services</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Preffects</span></a></li>
+                <li><a href="#"><i class="fa fa-cutlery"></i><span>Food and Cafeteria</span></a></li>
+                <li><a href="#"><i class="fa fa-commenting"></i><span>Counselling Service</span></a></li>
+                <li><a href="#"><i class="fa fa-gavel"></i><span>Monitors and Leaders </span></a></li>
 
             </ul>
         </section>
