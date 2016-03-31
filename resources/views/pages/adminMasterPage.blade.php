@@ -176,7 +176,7 @@
                                    <a href="{{action('HomeController@loadProfile')}}" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="{{action('HomeController@logoutMe')}}" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -394,7 +394,10 @@
 
         </section>
 
-        <!-- Main content -->
+        <!-- Main content< -->
+
+\
+
         <section class="content">
             @yield('content')
 
