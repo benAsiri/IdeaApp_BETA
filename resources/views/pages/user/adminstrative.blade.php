@@ -1,10 +1,9 @@
 @extends('pages.adminMasterPage')
-{{--parent inherits from --}}
 @section('css_ref')
     @parent
-
-
 @stop
+@stop
+
 
 @section('content')
 
@@ -127,12 +126,13 @@
     </div><!-- /.row -->
 
 
-
 @stop
 
 
 
 @section('js_ref')
     @parent
+
+    {{--all javascripts comes under master page comes here --}}
 
 @stop

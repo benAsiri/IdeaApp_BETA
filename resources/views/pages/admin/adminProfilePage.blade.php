@@ -6,14 +6,6 @@
 
 @section('content')
 
-
-
-
-
-
-
-
-
     @extends('pages.adminMasterPage')
 @section('css_ref')
     {{--Master page eke tiyana css ref okkoma methanata enawa--}}

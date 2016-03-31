@@ -1,10 +1,9 @@
 @extends('pages.adminMasterPage')
-{{--parent inherits from --}}
 @section('css_ref')
     @parent
-
-
 @stop
+@stop
+
 
 @section('content')
 
@@ -24,8 +23,7 @@
                                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on 2016/3/27 </i></small></p>
                             </div>
                             <div class="timeline-body">
-                                <p>Please manage to avoid the queue at the cashier.
-                                </p>
+                                <p>gsgg</p>
                             </div>
                         </div>
                     </li>
@@ -99,19 +97,6 @@
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="timeline-title">Payments</h4>
-                                <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on 2016/3/31 </i></small></p>
-                            </div>
-                            <div class="timeline-body">
-                                <p>It take a whole lot of time to get the refund of payments. Please be efficient on the refunding like when paying.                                </p>
-                            </div>
-                        </div>
-                    </li>
-
                 </ul>
 
 
@@ -127,12 +112,13 @@
     </div><!-- /.row -->
 
 
-
 @stop
 
 
 
 @section('js_ref')
     @parent
+
+    {{--all javascripts comes under master page comes here --}}
 
 @stop

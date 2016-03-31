@@ -23,7 +23,7 @@
             <!-- Profile Image -->
             <div class="box box-primary">
                 <div class="box-body box-profile">
-                    <img class="profile-user-img img-responsive img-circle" src="{{('/admin/dist/img/user4-128x128.jpg')}}"
+                    <img class="profile-user-img img-responsive img-circle" src="{{('/admin/dist/img/user2-160x160.jpg')}}"
                          alt="User profile picture">
 
                     <h3 class="profile-username text-center">{{$user->fname." ".$user->lname }}</h3>

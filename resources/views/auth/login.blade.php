@@ -28,12 +28,12 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href=""><b>Think</b>IT</a>
+        <a href=""><b>Think</b>It !</a>
 
     </div>
 
     <div class="login-box-body">
-        <p class="login-box-msg">Share your IDEAS</p>
+        <p class="login-box-msg">POST YOUR IDEAS ABOUT CAMPUS</p>
 
 
         <form class="form-horizontal" role="form" method="POST" action="/auth/login">
