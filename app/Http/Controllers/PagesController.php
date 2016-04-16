@@ -2,9 +2,10 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use DB;
+use App\Submission;
+use App\User;
 use Illuminate\Http\Request;
-
 class PagesController extends Controller {
 
 	/**
@@ -14,11 +15,14 @@ class PagesController extends Controller {
 	 */
 	public function administrative()
 	{
-		return view('pages.user.adminstrative');
+		$data=Submission::categoryViceSubmission('Administrative');
+		return view('pages.user.adminstrative')->with('data',$data);
+
 	}
 
 	public function  payments(){
-		return view('pages.user.payments');
+		$data=Submission::categoryViceSubmission('Payments');
+		return view('pages.user.payments')->with('data',$data);
 	}
 
 	public function create()

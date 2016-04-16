@@ -23,7 +23,7 @@ Route::get('email' , 'HomeController@resetPassword');
 
 Route::get('register', 'HomeController@registerMe');
 
-Route::get('Administrative','PagesController@administrative');
+Route::get('administrative','PagesController@administrative');
 
 Route::get('Payments','PagesController@payments');
 
