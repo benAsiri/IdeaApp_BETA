@@ -23,7 +23,7 @@
                                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on 2016/3/27 </i></small></p>
                             </div>
                             <div class="timeline-body">
-                                <p>gsgg</p>
+                                <p>Exam hall allocations should be notified beforehand.</p>
                             </div>
                         </div>
                     </li>
