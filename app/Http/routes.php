@@ -27,9 +27,6 @@ Route::get('administrative','PagesController@administrative');
 
 Route::get('Payments','PagesController@payments');
 
-Route::post('updatePost','PagesController@updatePost');
-
-
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
