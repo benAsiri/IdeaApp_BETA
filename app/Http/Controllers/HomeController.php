@@ -1,5 +1,5 @@
 <?php namespace App\Http\Controllers;
-
+use App\Submission;
 class HomeController extends Controller {
 
 	/*
@@ -28,9 +28,13 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
+
 	public function index()
 	{
-		return view('pages.admin.adminIndexPage');
+		$data=Submission::all();
+		return view('pages.admin.adminIndexPage')->with('data',$data);
+
+		//return view('pages.admin.adminIndexPage');
 	}
 
 	/**

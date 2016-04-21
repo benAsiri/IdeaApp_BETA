@@ -13,6 +13,10 @@ class PagesController extends Controller {
 	 *
 	 * @return Response
 	 */
+
+
+
+
 	public function administrative()
 	{
 		$data=Submission::categoryViceSubmission('Administrative');
