@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use App\Submission;
 use App\User;
-use Illuminate\Http\Request;
+
 class PagesController extends Controller {
 
 	/**
@@ -83,5 +83,18 @@ class PagesController extends Controller {
 	{
 		//
 	}
+
+	//update the current post
+	public function updatePost()
+	{
+		if(\Request::ajax()){
+			$data = \Input::all();
+
+			echo $data['currentPost'];
+		}
+	}
+
+
+
 
 }
