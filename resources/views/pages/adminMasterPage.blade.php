@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,9 +39,10 @@
         <!-- Logo -->
         <a href="{{action('HomeController@index')}}" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>A</b>LT</span>
+            <span class="logo-mini"><b>I</b>DEA</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>THINKE</b>IT</span>
+            <span class="logo-lg"><b>Welcome </b><span>{{Auth::user()->name}}</span>
+                {{--<b>THINK</b>It</span>--}}
 
         </a>
         <!-- Header Navbar: style can be found in header.less -->
@@ -72,15 +73,56 @@
                                                 <img src="{{ asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
-                                                Support Team
+                                                Insights of This Week
                                                 <small><i class="fa fa-clock-o"></i> 5 mins</small>
                                             </h4>
-                                            <p>Why not buy a new awesome theme?</p>
+                                            <p>Click Here to View the Insights of the Week</p>
                                         </a>
                                     </li><!-- end message -->
+
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="{{ asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Winner of Previous Week
+                                                <small><i class="fa fa-clock-o"></i> 6 mins</small>
+                                            </h4>
+                                            <p>Click Here to View </p>
+                                        </a>
+                                     </li><!-- end message -->
+
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="{{ asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Winner of Previous Week
+                                                <small><i class="fa fa-clock-o"></i> 6 mins</small>
+                                            </h4>
+                                            <p>Click Here to View </p>
+                                        </a>
+                                    </li><!-- end message -->
+
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="{{ asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Winner of Previous Week
+                                                <small><i class="fa fa-clock-o"></i> 6 mins</small>
+                                            </h4>
+                                            <p>Click Here to View </p>
+                                        </a>
+                                    </li><!-- end message -->
+
+
                                 </ul>
                             </li>
-                            <li class="footer"><a href="#">See All Messages</a></li>
+                           <li class="footer"><a href="#">See All Messages</a></li>
                         </ul>
                     </li>
                     <!-- Notifications: style can be found in dropdown.less -->
@@ -99,7 +141,56 @@
                                             <i class="fa fa-users text-aqua"></i> 5 new members joined today
                                         </a>
                                     </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
                                 </ul>
+
                             </li>
                             <li class="footer"><a href="#">View all</a></li>
                         </ul>
@@ -128,8 +219,52 @@
                                             </div>
                                         </a>
                                     </li><!-- end task item -->
+
+                                    <li><!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Design some buttons
+                                                <small class="pull-right">20%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">20% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li><!-- end task item -->
+
+                                    <li><!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Design some buttons
+                                                <small class="pull-right">20%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">20% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li><!-- end task item -->
+
+                                    <li><!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Design some buttons
+                                                <small class="pull-right">20%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">20% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li><!-- end task item -->
                                 </ul>
                             </li>
+
+
                             <li class="footer">
                                 <a href="#">View all tasks</a>
                             </li>
@@ -150,7 +285,7 @@
                             <li class="user-header">
                                 <img src="{{ asset('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                                 <p>
-                                    <span>{{"I AM"." ".Auth::user()->name}}</span>
+                                    <span>{{"Hey"." ".Auth::user()->name}}</span>
                                 </p>
                             </li>
                             <!-- Menu Body -->
@@ -220,21 +355,25 @@
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
 
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Administrative</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Payments</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Student Affrairs</span></a></li>
+                <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-hand-o-right"></i><span>Administrative</span></a></li>
+                <li><a href="{{action('PagesController@payments')}}"><i class="fa fa-usd"></i><span>Payments and Finance</span></a></li>
+                <li><a href="#"><i class="fa fa-child"></i><span>SIS ( Student Union )</span></a></li>
 
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Acedemic Division</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Places insight</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Office Staff</span></a></li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i><span>Acedemic Division</span></a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i><span>Campus Infrastructure</span></a></li>
+                <li><a href="#"><i class="fa fa-users"></i></i><span>Offical Staff</span></a></li>
 
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Teachers</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Cleaning Services</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Labs</span></a></li>
+                <li><a href="#"><i class="fa fa-street-view"></i><span>Lecturer Staff</span></a></li>
+                <li><a href="#"><i class="fa fa-history"></i><span>Cleaning Services</span></a></li>
+                <li><a href="#"><i class="fa fa-database"></i><span>Labs</span></a></li>
 
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Food and Cafeteria</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Parental Services</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Preffects</span></a></li>
+                <li><a href="#"><i class="fa fa-cutlery"></i><span>Foods and Cafeteria</span></a></li>
+                <li><a href="#"><i class="fa fa-commenting"></i><span>Help Desk</span></a></li>
+                <li><a href="#"><i class="fa fa-gavel"></i><span>Batch Ref and Teamleaders</span></a></li>
+
+                <li><a href="#"><i class="fa fa-heartbeat"></i><span>Health and Fitness</span></a></li>
+                <li><a href="#"><i class="fa fa-users"></i><span>Oncampus Socities</span></a></li>
+                <li><a href="#"><i class="fa fa-facebook-official"></i><span>Study Groups</span></a></li>
 
             </ul>
         </section>
@@ -254,20 +393,18 @@
 
         <!-- Main content< -->
 
-\
-
         <section class="content">
+
             @yield('content')
 
-
-        </section><!-- /.content -->
+       </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
 
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
-            <b>Version</b> 2.3.0
+            <b>BETA Version</b> 0.0.1
         </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2016 <a href="https://www.facebook.com/profile.php?id=1235727532">SLLIT FEEDBACK SYSTEM</a>.</strong> All rights reserved.
     </footer>
 
     <!-- Control Sidebar -->

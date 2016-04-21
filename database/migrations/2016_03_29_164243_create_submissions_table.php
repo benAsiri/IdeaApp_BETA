@@ -19,10 +19,10 @@ class CreateSubmissionsTable extends Migration {
 			$table->string('category');
 			$table->dateTime('date');
 			$table->integer('no_of_votes');
-			$table->integer('uid')->unsigned();
+			$table->integer('user_id')->unsigned();
 			$table->timestamps();
 
-			$table->foreign('uid')->references('id')->on('users');
+			$table->foreign('user_id')->references('id')->on('users');
 
 		});
 

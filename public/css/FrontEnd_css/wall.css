@@ -49,6 +49,7 @@
     position: relative;
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    background-color: lightgrey;
 }
 
 .timeline > li > .timeline-panel:before {
@@ -140,8 +141,10 @@
 .timeline-body > p,
 .timeline-body > ul {
     margin-bottom: 0;
+
 }
 
 .timeline-body > p + p {
     margin-top: 5px;
+
 }

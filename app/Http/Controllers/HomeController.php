@@ -30,7 +30,7 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('pages.adminMasterPage');
+		return view('pages.admin.adminIndexPage');
 	}
 
 	/**
