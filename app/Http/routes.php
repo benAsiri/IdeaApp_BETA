@@ -27,6 +27,7 @@ Route::get('administrative','PagesController@administrative');
 
 Route::get('Payments','PagesController@payments');
 
+Route::get('SIS','PagesController@sis');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

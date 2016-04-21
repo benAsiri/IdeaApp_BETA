@@ -44,6 +44,7 @@
             <span class="logo-lg"><b>Welcome </b><span>{{Auth::user()->name}}</span>
                 {{--<b>THINK</b>It</span>--}}
 
+        </span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -357,7 +358,7 @@
 
                 <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-hand-o-right"></i><span>Administrative</span></a></li>
                 <li><a href="{{action('PagesController@payments')}}"><i class="fa fa-usd"></i><span>Payments and Finance</span></a></li>
-                <li><a href="#"><i class="fa fa-child"></i><span>SIS ( Student Union )</span></a></li>
+                <li><a href="{{action('PagesController@sis')}}"><i class="fa fa-child"></i><span>SIS ( Student Union )</span></a></li>
 
                 <li><a href="#"><i class="fa fa-graduation-cap"></i><span>Acedemic Division</span></a></li>
                 <li><a href="#"><i class="fa fa-map-marker"></i><span>Campus Infrastructure</span></a></li>
@@ -422,7 +423,7 @@
                 <h3 class="control-sidebar-heading">Recent Activity</h3>
                 <ul class="control-sidebar-menu">
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <i class="menu-icon fa fa-birthday-cake bg-red"></i>
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
@@ -431,7 +432,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <i class="menu-icon fa fa-user bg-yellow"></i>
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
@@ -440,7 +441,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
@@ -449,7 +450,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <i class="menu-icon fa fa-file-code-o bg-green"></i>
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
@@ -462,7 +463,7 @@
                 <h3 class="control-sidebar-heading">Tasks Progress</h3>
                 <ul class="control-sidebar-menu">
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <h4 class="control-sidebar-subheading">
                                 Custom Template Design
                                 <span class="label label-danger pull-right">70%</span>
@@ -473,7 +474,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <h4 class="control-sidebar-subheading">
                                 Update Resume
                                 <span class="label label-success pull-right">95%</span>
@@ -484,7 +485,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <h4 class="control-sidebar-subheading">
                                 Laravel Integration
                                 <span class="label label-warning pull-right">50%</span>
@@ -495,7 +496,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <h4 class="control-sidebar-subheading">
                                 Back End Framework
                                 <span class="label label-primary pull-right">68%</span>
@@ -563,7 +564,7 @@
                     <div class="form-group">
                         <label class="control-sidebar-subheading">
                             Delete chat history
-                            <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                            <a href="javascript:;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
                         </label>
                     </div><!-- /.form-group -->
                 </form>

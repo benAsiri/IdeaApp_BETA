@@ -29,6 +29,11 @@ class PagesController extends Controller {
 		return view('pages.user.payments')->with('data',$data);
 	}
 
+	public function sis(){
+		$data=Submission::categoryViceSubmission('SIS');
+		return view('pages.user.sis')->with('data',$data);
+	}
+
 	public function create()
 	{
 		//
