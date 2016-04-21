@@ -27,6 +27,8 @@ Route::get('administrative','PagesController@administrative');
 
 Route::get('Payments','PagesController@payments');
 
+Route::get('forget','HomeController@resetPassword');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
