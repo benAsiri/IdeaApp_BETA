@@ -34,7 +34,6 @@
 
 @section('content')
 
-
     {{--new content ares 2--}}
 
 
