@@ -45,7 +45,7 @@
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+								<button type="submit" class="btn btn-primary" >
 									Reset Password
 								</button>
 							</div>

@@ -51,7 +51,7 @@
 									Login
 								</button>
 
-								<a href="/password/email">Forgot Your Password?</a>
+								<a href="#"  data-toggle="modal" data-target="#myModal">Forgot Your Password?</a>
 							</div>
 						</div>
 					</form>
