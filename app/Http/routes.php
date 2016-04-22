@@ -31,9 +31,9 @@ Route::get('Posts','PagesController@Posts');
 
 Route::get('Comment','PagesController@comments');
 
-
-
 Route::get('Academic Division','PagesController@academicDiv');
+
+Route::get('SIS','PagesController@sis');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
