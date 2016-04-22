@@ -360,7 +360,7 @@
                 <li><a href="{{action('PagesController@payments')}}"><i class="fa fa-usd"></i><span>Payments and Finance</span></a></li>
                 <li><a href="{{action('PagesController@sis')}}"><i class="fa fa-child"></i><span>SIS ( Student Union )</span></a></li>
 
-                <li><a href="#"><i class="fa fa-graduation-cap"></i><span>Acedemic Division</span></a></li>
+                <li><a href="{{action('PagesController@academicDiv')}}"><i class="fa fa-graduation-cap"></i><span>Acedemic Division</span></a></li>
                 <li><a href="#"><i class="fa fa-map-marker"></i><span>Campus Infrastructure</span></a></li>
                 <li><a href="#"><i class="fa fa-users"></i></i><span>Offical Staff</span></a></li>
 

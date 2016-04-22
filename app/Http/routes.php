@@ -33,6 +33,8 @@ Route::get('Comment','PagesController@comments');
 
 
 
+Route::get('Academic Division','PagesController@academicDiv');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
