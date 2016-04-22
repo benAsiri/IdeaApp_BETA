@@ -31,6 +31,8 @@ Route::get('Posts','PagesController@Posts');
 
 Route::get('Comment','PagesController@comments');
 
+Route::post('updatePost', 'PagesController@updatePost');
+
 Route::get('Academic Division','PagesController@academicDiv');
 
 Route::get('SIS','PagesController@sis');

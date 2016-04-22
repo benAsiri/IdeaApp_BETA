@@ -114,10 +114,12 @@ class PagesController extends Controller {
 	{
 		if(\Request::ajax()){
 			$data = \Input::all();
-
+			Submission::newPost($data);
 			echo $data['currentPost'];
 		}
 	}
+
+
 
 
 

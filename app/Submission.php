@@ -1,5 +1,6 @@
 <?php namespace App;
 
+use Carbon\Carbon;
 use DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -37,6 +38,17 @@ class Submission extends Model {
         $submission=DB::table('submissions')->get();;
 
         return $submission;
+    }
+
+    public static function newPost($data){
+        //DB::insert('insert into submissions (cate,post) values (?, ?)', [1, 'Dayle']);
+        $s = new Submission();
+        $s->post = $data['currentPost'];
+        $s->category= $data['currentCat'];
+        $s->user_id= \Auth::user()->id;
+
+        $s->date=Carbon::now();
+        $s->save();
     }
 
 /*    public static function createSubmission(Request $request)
