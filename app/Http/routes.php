@@ -29,6 +29,8 @@ Route::get('Payments','PagesController@payments');
 
 Route::get('SIS','PagesController@sis');
 
+Route::get('Academic Division','PagesController@academicDiv');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

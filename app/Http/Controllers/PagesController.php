@@ -34,6 +34,10 @@ class PagesController extends Controller {
 		return view('pages.user.sis')->with('data',$data);
 	}
 
+	public function academicDiv(){
+		$data=Submission::categoryViceSubmission('Academic Division');
+		return view('pages.user.academicDivision')->with('data',$data);
+	}
 	public function create()
 	{
 		//
