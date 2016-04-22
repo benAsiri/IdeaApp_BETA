@@ -43,7 +43,7 @@
 							</div>
 
 							<div class="form-group{{ $errors->has('dept' ) ? ' has-error' : ''}}">
-								<label class="col-md-4 control-label">Department</label>
+								<label class="col-md-4 control-label">Faculty</label>
 								<div class="col-md-6">
 									<input type="email" class="form-control" name="dept" value="{{ old('dept') }}">
 								</div>
