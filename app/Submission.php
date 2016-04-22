@@ -2,6 +2,7 @@
 
 use DB;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Submission extends Model {
 
@@ -23,5 +24,25 @@ class Submission extends Model {
 
         return $submission;
     }
+
+    public static function AllSubmission()
+    {
+        $submission=DB::table('submissions')->get();;
+
+        return $submission;
+    }
+
+    public static function viewAllSubmission()
+    {
+        $submission=DB::table('submissions')->get();;
+
+        return $submission;
+    }
+
+/*    public static function createSubmission(Request $request)
+    {
+        $submission = new Submission();
+        return $submission;
+    } */
 }
 

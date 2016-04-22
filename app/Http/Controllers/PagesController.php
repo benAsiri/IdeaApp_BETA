@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
@@ -49,7 +50,18 @@ class PagesController extends Controller {
 		//
 	}
 
-	/**
+	public function Posts()
+	{
+		$data=Submission::viewAllSubmission();
+		return view('pages.user.Posts')->with('data',$data);
+	}
+
+	public function comments()
+	{
+		$com=Comment::viewAllComent();
+		return view('pages.user.Posts')->with('com',$com);
+	}
+	/**s
 	 * Display the specified resource.
 	 *
 	 * @param  int  $id

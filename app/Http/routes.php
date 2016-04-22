@@ -27,7 +27,11 @@ Route::get('administrative','PagesController@administrative');
 
 Route::get('Payments','PagesController@payments');
 
-Route::get('SIS','PagesController@sis');
+Route::get('Posts','PagesController@Posts');
+
+Route::get('Comment','PagesController@comments');
+
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

@@ -21,28 +21,42 @@
 						<form class="form-horizontal" role="form" method="POST" action="/auth/register">
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-							<div class="form-group">
+							<div class="form-group{{ $errors->has('name' ) ? ' has-error' : ''}}">
 								<label class="col-md-4 control-label">Name</label>
 								<div class="col-md-6">
 									<input type="text" class="form-control" name="name" value="{{ old('name') }}">
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group{{ $errors->has('email' ) ? ' has-error' : ''}}">
 								<label class="col-md-4 control-label">E-Mail Address</label>
 								<div class="col-md-6">
 									<input type="email" class="form-control" name="email" value="{{ old('email') }}">
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group{{ $errors->has('dob' ) ? ' has-error' : ''}}">
+								<label class="col-md-4 control-label">Date of Birth</label>
+								<div class="col-md-6">
+									<input type="email" class="form-control" name="dob" value="{{ old('dob') }}">
+								</div>
+							</div>
+
+							<div class="form-group{{ $errors->has('dept' ) ? ' has-error' : ''}}">
+								<label class="col-md-4 control-label">Department</label>
+								<div class="col-md-6">
+									<input type="email" class="form-control" name="dept" value="{{ old('dept') }}">
+								</div>
+							</div>
+
+							<div class="form-group{{ $errors->has('password' ) ? ' has-error' : ''}}">
 								<label class="col-md-4 control-label">Password</label>
 								<div class="col-md-6">
 									<input type="password" class="form-control" name="password">
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group{{ $errors->has('password_confirmation' ) ? ' has-error' : ''}}">
 								<label class="col-md-4 control-label">Confirm Password</label>
 								<div class="col-md-6">
 									<input type="password" class="form-control" name="password_confirmation">

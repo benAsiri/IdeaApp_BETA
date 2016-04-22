@@ -59,4 +59,5 @@ class HomeController extends Controller {
 		\Auth::logout(); // clear the session that i have already logged in
 		return view('auth.login');
 	}
+
 }

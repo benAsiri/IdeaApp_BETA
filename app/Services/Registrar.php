@@ -4,6 +4,8 @@ use App\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 
+use Illuminate\Support\Facades\Mail;
+
 class Registrar implements RegistrarContract {
 
 	/**
@@ -39,5 +41,20 @@ class Registrar implements RegistrarContract {
 
 		]);
 	}
+
+	/*public function send_mail(array $data)
+	{
+		'name' => $data['name'];
+		'email' => $data['email'];
+
+
+
+		Mail::send([],$data, function ($message) use ($data)
+		{
+			//$user = Input::get('email');
+			$message->to($data['email'])->subject('Welcome !!!')->setBody('Hello '$data['name'])
+		});
+
+	} */
 
 }
