@@ -13,28 +13,16 @@ class HomeController extends Controller {
 	|
 	*/
 
-	/**
-	 * Create a new controller instance.
-	 *
-	 * @return void
-	 */
 	public function __construct()
 	{
 		$this->middleware('auth');
 	}
 
-	/**
-	 * Show the application dashboard to the user.
-	 *
-	 * @return Response
-	 */
 
 	public function index()
 	{
 		$data=Submission::all();
 		return view('pages.admin.adminIndexPage')->with('data',$data);
-
-		//return view('pages.admin.adminIndexPage');
 	}
 
 	/**
@@ -43,7 +31,6 @@ class HomeController extends Controller {
 	public function loadProfile()
 	{
 		$user = \Auth::user();
-
 		return view('profile')->with('user',$user);
 	}
 
