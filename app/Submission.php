@@ -46,7 +46,6 @@ class Submission extends Model {
         $s->post = $data['currentPost'];
         $s->category= $data['currentCat'];
         $s->user_id= \Auth::user()->id;
-
         $s->date=Carbon::now();
         $s->save();
     }

@@ -1,9 +1,8 @@
 @extends('pages.adminMasterPage')
 {{--parent inherits from --}}
 @section('css_ref')
-    @parent
 
-
+@parent
 @stop
 
 @section('content')
@@ -28,7 +27,7 @@
 <!-- bootstrap wysihtml5 - text editor -->
 <link rel="stylesheet" href="{{asset('/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 {{--new content ares 2--}}
-    <link href="{{ asset('css/FrontEnd_css/wall.css') }}" rel="stylesheet" type="text/css" >
+<link href="{{ asset('css/FrontEnd_css/wall.css') }}" rel="stylesheet" type="text/css" >
 
 
     <div>
