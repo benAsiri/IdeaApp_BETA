@@ -1,8 +1,7 @@
 @extends('pages.adminMasterPage')
 {{--parent inherits from --}}
 @section('css_ref')
-
-@parent
+    @parent
 @stop
 
 @section('content')
@@ -32,8 +31,7 @@
 
 
     <div>
-        <!-- Main content -->
-        <section class="content">
+
             <div class="row">
                 <div class="col-md-9">
                         <label>Select Your Category</label>
@@ -60,7 +58,6 @@
                     </div><!-- /. box -->
                 </div><!-- /.col -->
             </div><!-- /.row -->
-        </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
 
 
