@@ -32,11 +32,11 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="{{asset('/pages/admin/adminIndexPage')}}" class="logo">
+        <a href="{{action('HomeController@index')}}" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Admin</b>LTE</span>
+            <span class="logo-lg"><b>Welcome </b>{{Auth::user()->name}}</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -213,15 +213,8 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i
-                                class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                        <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-                    </ul>
+                </li>
+                <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-book"></i> <span>Administrative</span></a>
                 </li>
                 <li class="treeview">
                     <a href="#">
@@ -403,7 +396,7 @@
                 <h3 class="control-sidebar-heading">Recent Activity</h3>
                 <ul class="control-sidebar-menu">
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
                             <div class="menu-info">
@@ -414,7 +407,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <i class="menu-icon fa fa-user bg-yellow"></i>
 
                             <div class="menu-info">
@@ -425,7 +418,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 
                             <div class="menu-info">
@@ -436,7 +429,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <i class="menu-icon fa fa-file-code-o bg-green"></i>
 
                             <div class="menu-info">
@@ -452,7 +445,7 @@
                 <h3 class="control-sidebar-heading">Tasks Progress</h3>
                 <ul class="control-sidebar-menu">
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <h4 class="control-sidebar-subheading">
                                 Custom Template Design
                                 <span class="label label-danger pull-right">70%</span>
@@ -464,7 +457,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <h4 class="control-sidebar-subheading">
                                 Update Resume
                                 <span class="label label-success pull-right">95%</span>
@@ -476,7 +469,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <h4 class="control-sidebar-subheading">
                                 Laravel Integration
                                 <span class="label label-warning pull-right">50%</span>
@@ -488,7 +481,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript::;">
+                        <a href="javascript:;">
                             <h4 class="control-sidebar-subheading">
                                 Back End Framework
                                 <span class="label label-primary pull-right">68%</span>
@@ -569,7 +562,7 @@
                     <div class="form-group">
                         <label class="control-sidebar-subheading">
                             Delete chat history
-                            <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                            <a href="javascript:;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
                         </label>
                     </div>
                     <!-- /.form-group -->
