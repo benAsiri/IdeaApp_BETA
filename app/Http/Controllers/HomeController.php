@@ -22,7 +22,7 @@ class HomeController extends Controller {
 	public function index()
 	{
 		$data=Submission::all();
-		return view('pages.admin.adminIndexPage')->with('data',$data);
+		return view('pages.user.adminstrative')->with('data',$data);
 	}
 
 	/**
@@ -30,8 +30,7 @@ class HomeController extends Controller {
      */
 	public function loadProfile()
 	{
-		$user = \Auth::user();
-		return view('profile')->with('user',$user);
+			return view('pages.admin.adminProfilePage');
 	}
 
 	public function resetPassword(){

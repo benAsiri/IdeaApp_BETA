@@ -36,6 +36,12 @@ class PagesController extends Controller {
 		$data=Submission::categoryViceSubmission('Academic Division');
 		return view('pages.user.academicDivision')->with('data',$data);
 	}
+
+	public function CleanSer(){
+		$data=Submission::categoryViceSubmission('Academic Division');
+		return view('pages.user.cleaningServices')->with('data',$data);
+	}
+
 	public function create()
 	{
 		//

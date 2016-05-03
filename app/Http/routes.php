@@ -31,6 +31,7 @@ Route::get('Posts','PagesController@Posts');
 
 Route::get('Comment','PagesController@comments');
 
+Route::get('CleaningServices','PagesController@CleanSer');
 
 Route::post('updatePost', 'PagesController@updatePost');
 

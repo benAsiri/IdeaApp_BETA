@@ -43,7 +43,7 @@
             <!-- Profile Image -->
             <div class="box box-primary">
                 <div class="box-body box-profile">
-                    <img class="profile-user-img img-responsive img-circle" src="{{('/admin/dist/img/user4-128x128.jpg')}}"
+                    <img class="profile-user-img img-responsive img-circle" src="{{asset('/admin/dist/img/user4-128x128.jpg')}}"
                          alt="User profile picture">
 
                     <h3 class="profile-username text-center">{{$user->fname." ".$user->lname }}</h3>
@@ -122,7 +122,7 @@
                         <!-- Post -->
                         <div class="post">
                             <div class="user-block">
-                                <img class="img-circle img-bordered-sm" src="{{('/admin/dist/img/user1-128x128.jpg')}}"
+                                <img class="img-circle img-bordered-sm" src="{{asset('/admin/dist/img/user1-128x128.jpg')}}"
                                      alt="user image">
                         <span class='username'>
                           <a href="#">Jonathan Burke Jr.</a>
@@ -154,7 +154,7 @@
                         <!-- Post -->
                         <div class="post clearfix">
                             <div class='user-block'>
-                                <img class='img-circle img-bordered-sm' src='../../dist/img/user7-128x128.jpg'
+                                <img class='img-circle img-bordered-sm' src="{{asset('/admin/dist/img/user7-128x128.jpg')}}"
                                      alt='user image'>
                         <span class='username'>
                           <a href="#">Sarah Ross</a>
@@ -187,7 +187,7 @@
                         <!-- Post -->
                         <div class="post">
                             <div class='user-block'>
-                                <img class='img-circle img-bordered-sm' src='../../dist/img/user6-128x128.jpg'
+                                <img class='img-circle img-bordered-sm' src="{{asset('/admin/dist/img/user7-128x128.jpg')}}"
                                      alt='user image'>
                         <span class='username'>
                           <a href="#">Adam Jones</a>
@@ -198,21 +198,21 @@
                             <!-- /.user-block -->
                             <div class='row margin-bottom'>
                                 <div class='col-sm-6'>
-                                    <img class='img-responsive' src='../../dist/img/photo1.png' alt='Photo'>
+                                    <img class='img-responsive' src="{{asset('/admin/dist/img/photo1.png')}}" alt='Photo'>
                                 </div>
                                 <!-- /.col -->
                                 <div class='col-sm-6'>
                                     <div class='row'>
                                         <div class='col-sm-6'>
-                                            <img class='img-responsive' src='../../dist/img/photo2.png' alt='Photo'>
+                                            <img class='img-responsive' src="{{asset('/admin/dist/img/photo2.png')}}" alt='Photo'>
                                             <br>
-                                            <img class='img-responsive' src='../../dist/img/photo3.jpg' alt='Photo'>
+                                            <img class='img-responsive' src="{{asset('/admin/dist/img/photo3.png')}}" alt='Photo'>
                                         </div>
                                         <!-- /.col -->
                                         <div class='col-sm-6'>
-                                            <img class='img-responsive' src='../../dist/img/photo4.jpg' alt='Photo'>
+                                            <img class='img-responsive' src="{{asset('/admin/dist/img/photo4.jpg')}}" alt='Photo'>
                                             <br>
-                                            <img class='img-responsive' src='../../dist/img/photo1.png' alt='Photo'>
+                                            <img class='img-responsive' src="{{asset('/admin/dist/img/photo1.png')}}" alt='Photo'>
                                         </div>
                                         <!-- /.col -->
                                     </div>

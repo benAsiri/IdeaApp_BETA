@@ -31,7 +31,7 @@
     <link href="{{ asset('css/FrontEnd_css/wall.css') }}" rel="stylesheet" type="text/css" >
 
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
 
             <div>
                 <ul class="timeline">
@@ -50,6 +50,7 @@
                                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on {{$d->date}} </i></small></p>
                             </div>
                             <div class="timeline-body">
+                                <img class="img-responsive pad" src="{{asset('admin/dist/img/photo2.png')}}" alt="Photo">
                                 <p>{{$d->post}}
                                 </p>
                                 <div>&nbsp;</div>
@@ -60,7 +61,7 @@
                                 <div>&nbsp;</div>
                                 <form>
                                     <div class="img-push">
-                                        <input class="form-control input-sm" placeholder="Press enter to post comment" type="text">
+                                        <button class="btn btn-block btn-info btn-sm">COMMENT ABOUT IT</button>
                                     </div>
                                 </form>
                             </div>
@@ -76,6 +77,7 @@
                                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on {{$d->date}} </i></small></p>
                             </div>
                             <div class="timeline-body">
+                                <img class="img-responsive pad" src="{{asset('admin/dist/img/photo2.png')}}" alt="Photo">
                                 <p>{{$d->post}}</p>
                                 <div>&nbsp;</div>
                                 <div>
@@ -85,7 +87,7 @@
                                 <div>&nbsp;</div>
                                 <form>
                                     <div class="img-push">
-                                        <input class="form-control input-sm" placeholder="Press enter to post comment" type="text">
+                                        <button class="btn btn-block btn-info btn-sm">COMMENT ABOUT IT</button>
                                     </div>
                                 </form>
 
