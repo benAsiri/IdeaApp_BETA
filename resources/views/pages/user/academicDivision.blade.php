@@ -29,6 +29,7 @@
                                         <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on {{$d->date}} </i></small></p>
                                     </div>
                                     <div class="timeline-body">
+                                        <img class="img-responsive pad" src="{{asset($d->Image)}}" alt="Photo">
                                         <p>{{$d->post}}
                                         </p>
                                         <div>&nbsp;</div>
@@ -55,6 +56,7 @@
                                         <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on {{$d->date}} </i></small></p>
                                     </div>
                                     <div class="timeline-body">
+                                        <img class="img-responsive pad" src="{{asset($d->Image)}}" alt="Photo">
                                         <p>{{$d->post}}</p>
                                         <div>&nbsp;</div>
                                         <div>

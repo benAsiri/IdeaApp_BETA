@@ -38,7 +38,7 @@
                     @foreach($data as $d)
 
                        <?php
-                            $t=$d->id;
+                        $t=$d->id;
                         $t = $t%2;
                             ?>
                         @if($t == 0)
@@ -50,7 +50,7 @@
                                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on {{$d->date}} </i></small></p>
                             </div>
                             <div class="timeline-body">
-                                <img class="img-responsive pad" src="{{asset('admin/dist/img/photo2.png')}}" alt="Photo">
+                                <img class="img-responsive pad" src="{{asset('Image/'.$d->Image)}}" alt="Photo">
                                 <p>{{$d->post}}
                                 </p>
                                 <div>&nbsp;</div>
@@ -77,7 +77,7 @@
                                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on {{$d->date}} </i></small></p>
                             </div>
                             <div class="timeline-body">
-                                <img class="img-responsive pad" src="{{asset('admin/dist/img/photo2.png')}}" alt="Photo">
+                                <img class="img-responsive pad" src="{{asset('Image/'.$d->Image)}}" alt="Photo">
                                 <p>{{$d->post}}</p>
                                 <div>&nbsp;</div>
                                 <div>

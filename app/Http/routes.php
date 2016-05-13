@@ -15,13 +15,17 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-Route::get('profile','HomeController@loadProfile');
+Route::get('Myprofile','HomeController@loadProfile');
 
 Route::get('logout', 'HomeController@logoutMe');
 
 Route::get('email' , 'HomeController@resetPassword');
 
 Route::get('register', 'HomeController@registerMe');
+
+Route::get('Idea/create','PagesController@addIdea');
+
+Route::post('Idea','PagesController@store');
 
 Route::get('administrative','PagesController@administrative');
 
@@ -38,6 +42,9 @@ Route::post('updatePost', 'PagesController@updatePost');
 Route::get('Academic Division','PagesController@academicDiv');
 
 Route::get('SIS','PagesController@sis');
+
+Route::post('picture','ImageController@picture');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

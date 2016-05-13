@@ -40,6 +40,9 @@ class Submission extends Model {
         return $submission;
     }
 
+
+
+    /*
     public static function newPost($data){
         //DB::insert('insert into submissions (cate,post) values (?, ?)', [1, 'Dayle']);
         $s = new Submission();
@@ -48,7 +51,7 @@ class Submission extends Model {
         $s->user_id= \Auth::user()->id;
         $s->date=Carbon::now();
         $s->save();
-    }
+    }*/
 
 /*    public static function createSubmission(Request $request)
     {
