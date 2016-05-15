@@ -125,6 +125,7 @@
         <a href="{{asset('/emails/password')}}">Forgot Your Password?</a>
         <a href="{{asset('/auth/register')}}" class="text-center">Register a new membership</a>
 
+
     </div>
     <!-- /.login-box-body -->
 </div>

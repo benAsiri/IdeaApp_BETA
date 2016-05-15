@@ -22,6 +22,7 @@ class CreateSubmissionsTable extends Migration {
 			$table->integer('no_of_dislikes');
 			$table->integer('user_id')->unsigned();
 			$table->timestamps();
+			$table->string('Imagepath');
 
 			$table->foreign('user_id')->references('id')->on('users');
 

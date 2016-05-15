@@ -3,20 +3,11 @@
 @section('css_ref')
     @parent
 @stop
-
 @section('content')
 
-    @extends('pages.adminMasterPage')
 @section('css_ref')
-    {{--Master page eke tiyana css ref okkoma methanata enawa--}}
-
-    {{--comment short cut ( ctrl + /)--}}
     @parent
-
-
-
 @stop
-{{--meh section eke end eka --}}
 
 @section('content_header')
 
@@ -39,7 +30,6 @@
 
     <div class="row">
         <div class="col-md-3">
-
             <!-- Profile Image -->
             <div class="box box-primary">
                 <div class="box-body box-profile">

@@ -7,6 +7,10 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     @section('css_ref')
+
+
+
+
             <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{asset('admin/bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
@@ -19,25 +23,33 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{asset('admin/dist/css/skins/_all-skins.min.css')}}">
     @show
-            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+
+
+
+
+   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
+
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
+
 
     <header class="main-header">
         <!-- Logo -->
         <a href="{{action('HomeController@index')}}" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>A</b>LT</span>
+            <span class="logo-mini"><b>T</b>IT</span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg"><b>Welcome </b>{{Auth::user()->name}}</span>
         </a>
+
+
+
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
@@ -138,33 +150,10 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-                            <span class="hidden-xs">Alexander Pierce</span>
+                           <span class="hidden-xs"><i class="fa fa-user" aria-hidden="false"></i>  My Account</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <!-- User image -->
-                            <li class="user-header">
-                                <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
-
-                                <p>
-                                    Alexander Pierce - Web Developer
-                                    <small>Member since Nov. 2012</small>
-                                </p>
-                            </li>
-                            <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Followers</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Sales</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Friends</a>
-                                </div>
-                            </li>
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
+                              <li class="user-footer">
                                 <div class="pull-left">
                                     <a href="{{action('HomeController@loadProfile')}}" class="btn btn-default btn-flat">Profile</a>
                                 </div>
@@ -195,7 +184,7 @@
                     <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Alexander Pierce</p>
+                    <p>THINK IT</p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -213,36 +202,19 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
-                    </li>
-                    <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-book"></i> <span>Administrative</span></a>
-                    </li>
-                    </li>
-                    </li>
+
+                    {{--Add Ideas for the Page--}}
+
+                    <li><a href="{{action('PagesController@addIdea')}}"><i class="fa fa-book"></i> <span>Add Idea</span></a></li>
+                    <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-book"></i> <span>Administrative</span></a></li>
                     <li><a href="{{action('PagesController@academicDiv')}}"><i class="fa fa-book"></i> <span>Academic Division</span></a>
-                    </li>
-                    </li>
                     <li><a href="{{action('PagesController@CleanSer')}}"><i class="fa fa-book"></i> <span>Cleaning Service</span></a>
-                    </li>
-                    </li>
-                    <li><a href="{{action('PagesController@payments')}}"><i class="fa fa-book"></i> <span>Payments</span></a>
-                    </li>
-                    </li>
+                    <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-book"></i> <span>Payments</span></a>
                     <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-book"></i> <span>SIS( Student Union )</span></a>
-                    </li>
-                    </li>
                     <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-book"></i> <span>Payments Finance</span></a>
-                    </li>
-                    </li>
                     <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-book"></i> <span>Payments Finance</span></a>
-                    </li>
-                    </li>
                     <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-book"></i> <span>LABS</span></a>
-                    </li>
-                    </li>
-                    </li>
                     <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-book"></i> <span>Student Clubs</span></a>
-                    </li>
-                    </li>
 
                 {{--<li class="treeview">--}}
                     {{--<a href="#">--}}
@@ -404,7 +376,7 @@
                 <h3 class="control-sidebar-heading">Recent Activity</h3>
                 <ul class="control-sidebar-menu">
                     <li>
-                        <a href="javascript:;">
+                        <a href="javascript:">
                             <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
                             <div class="menu-info">
@@ -415,7 +387,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="javascript:">
                             <i class="menu-icon fa fa-user bg-yellow"></i>
 
                             <div class="menu-info">
@@ -426,7 +398,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="javascript:">
                             <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 
                             <div class="menu-info">
@@ -437,7 +409,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="javascript:">
                             <i class="menu-icon fa fa-file-code-o bg-green"></i>
 
                             <div class="menu-info">
@@ -453,7 +425,7 @@
                 <h3 class="control-sidebar-heading">Tasks Progress</h3>
                 <ul class="control-sidebar-menu">
                     <li>
-                        <a href="javascript:;">
+                        <a href="javascript:">
                             <h4 class="control-sidebar-subheading">
                                 Custom Template Design
                                 <span class="label label-danger pull-right">70%</span>
@@ -465,7 +437,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="javascript:">
                             <h4 class="control-sidebar-subheading">
                                 Update Resume
                                 <span class="label label-success pull-right">95%</span>
@@ -477,7 +449,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="javascript:">
                             <h4 class="control-sidebar-subheading">
                                 Laravel Integration
                                 <span class="label label-warning pull-right">50%</span>
@@ -489,7 +461,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="javascript:">
                             <h4 class="control-sidebar-subheading">
                                 Back End Framework
                                 <span class="label label-primary pull-right">68%</span>
@@ -570,7 +542,7 @@
                     <div class="form-group">
                         <label class="control-sidebar-subheading">
                             Delete chat history
-                            <a href="javascript:;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                            <a href="javascript:" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
                         </label>
                     </div>
                     <!-- /.form-group -->
@@ -598,6 +570,8 @@
 <script src="{{asset('/admin/dist/js/app.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('/admin/dist/js/demo.js')}}"></script>
+
+<script src="{{asset('/admin/plugins/ionslider/ion.rangeSlider.min.js')}}"></script>
 @show
 </body>
 </html>

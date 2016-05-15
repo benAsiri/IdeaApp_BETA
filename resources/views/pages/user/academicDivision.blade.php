@@ -33,6 +33,7 @@
                                         </p>
                                     </div>
                                     <div class="timeline-body">
+                                        <img class="img-responsive pad" src="{{asset($d->Image)}}" alt="Photo">
                                         <p>{{$d->post}}
                                         </p>
 
@@ -73,6 +74,7 @@
                                         </p>
                                     </div>
                                     <div class="timeline-body">
+                                        <img class="img-responsive pad" src="{{asset($d->Image)}}" alt="Photo">
                                         <p>{{$d->post}}</p>
 
                                         <div>&nbsp;</div>

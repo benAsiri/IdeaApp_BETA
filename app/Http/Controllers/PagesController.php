@@ -7,6 +7,8 @@ use DB;
 use App\Submission;
 use App\User;
 use App\Like;
+use Illuminate\Support\Facades\Input;
+use willvincent\Rateable\Rateable;
 
 class PagesController extends Controller
 {
@@ -17,43 +19,62 @@ class PagesController extends Controller
      * @return Response
      */
 
-    public function administrative()
-    {
-        $data = Submission::categoryViceSubmission('Administrative');
-        return view('pages.user.adminstrative')->with('data', $data);
+	//Add Ideas Route
+	public function addIdea()
+	{
+		$ideas = Submission::orderBy('category')->get();
+		return view('pages.user.addIdea')->with('ideas',$ideas);
+	}
+
+
+	public function store()
+	{
+		$Idea = new Submission();
+		$Idea->post = Input::post('post');
+		$Idea->category = Input::post('cat');
+		$Idea->save();
+		return $Idea;
+
+	}
+
+	public function administrative()
+	{
+		$data = Submission::categoryViceSubmission('Administrative');
+		return view('pages.user.adminstrative')->with('data', $data);
 
     }
 
-    public function  payments()
-    {
-        $data = Submission::categoryViceSubmission('Payments');
-        return view('pages.user.payments')->with('data', $data);
-    }
+	public function  payments(){
+		$data=Submission::categoryViceSubmission('Payments');
+		return view('pages.user.payments')->with('data',$data);
+	}
 
-    public function sis()
-    {
-        $data = Submission::categoryViceSubmission('SIS');
-        return view('pages.user.sis')->with('data', $data);
-    }
+	public function sis(){
+		$data=Submission::categoryViceSubmission('SIS');
+		return view('pages.user.sis')->with('data',$data);
+	}
 
-    public function academicDiv()
-    {
-        $data = Submission::categoryViceSubmission('Academic Division');
-        return view('pages.user.academicDivision')->with('data', $data);
-    }
+	public function academicDiv(){
+		$data=Submission::categoryViceSubmission('Academic Division');
+		return view('pages.user.academicDivision')->with('data',$data);
+	}
 
-    public function CleanSer()
-    {
-        $data = Submission::categoryViceSubmission('Cleaning Service');
-        return view('pages.user.cleaningServices')->with('data', $data);
-    }
+	public function CleanSer(){
+		$data=Submission::categoryViceSubmission('Academic Division');
+		return view('pages.user.cleaningServices')->with('data',$data);
+	}
 
-//	check whether user has liked to this post before
+	public function image()
+	{
+		$idea = Submission::FindOrFail(1);
+		return view('sampath');
+	}
 
-    public function create()
-    {
-        //
-    }
+	public function create()
+	{
+		//
+	}
+
 
     /**
      * Store a newly created resource in storage.
