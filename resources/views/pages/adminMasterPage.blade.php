@@ -224,7 +224,7 @@
                     <li><a href="{{action('PagesController@CleanSer')}}"><i class="fa fa-book"></i> <span>Cleaning Service</span></a>
                     </li>
                     </li>
-                    <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-book"></i> <span>Payments</span></a>
+                    <li><a href="{{action('PagesController@payments')}}"><i class="fa fa-book"></i> <span>Payments</span></a>
                     </li>
                     </li>
                     <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-book"></i> <span>SIS( Student Union )</span></a>

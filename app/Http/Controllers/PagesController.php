@@ -6,125 +6,202 @@ use App\Http\Controllers\Controller;
 use DB;
 use App\Submission;
 use App\User;
+use App\Like;
 
-class PagesController extends Controller {
+class PagesController extends Controller
+{
 
-	/**
-	 * Display the Admisnistrative page.
-	 *
-	 * @return Response
-	 */
+    /**
+     * Display the Admisnistrative page.
+     *
+     * @return Response
+     */
 
-	public function administrative()
-	{
-		$data=Submission::categoryViceSubmission('Administrative');
-		return view('pages.user.adminstrative')->with('data',$data);
+    public function administrative()
+    {
+        $data = Submission::categoryViceSubmission('Administrative');
+        return view('pages.user.adminstrative')->with('data', $data);
 
-	}
+    }
 
-	public function  payments(){
-		$data=Submission::categoryViceSubmission('Payments');
-		return view('pages.user.payments')->with('data',$data);
-	}
+    public function  payments()
+    {
+        $data = Submission::categoryViceSubmission('Payments');
+        return view('pages.user.payments')->with('data', $data);
+    }
 
-	public function sis(){
-		$data=Submission::categoryViceSubmission('SIS');
-		return view('pages.user.sis')->with('data',$data);
-	}
+    public function sis()
+    {
+        $data = Submission::categoryViceSubmission('SIS');
+        return view('pages.user.sis')->with('data', $data);
+    }
 
-	public function academicDiv(){
-		$data=Submission::categoryViceSubmission('Academic Division');
-		return view('pages.user.academicDivision')->with('data',$data);
-	}
+    public function academicDiv()
+    {
+        $data = Submission::categoryViceSubmission('Academic Division');
+        return view('pages.user.academicDivision')->with('data', $data);
+    }
 
-	public function CleanSer(){
-		$data=Submission::categoryViceSubmission('Academic Division');
-		return view('pages.user.cleaningServices')->with('data',$data);
-	}
+    public function CleanSer()
+    {
+        $data = Submission::categoryViceSubmission('Cleaning Service');
+        return view('pages.user.cleaningServices')->with('data', $data);
+    }
 
-	public function create()
-	{
-		//
-	}
+//	check whether user has liked to this post before
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
+    public function create()
+    {
+        //
+    }
 
-	public function Posts()
-	{
-		$data=Submission::viewAllSubmission();
-		return view('pages.user.Posts')->with('data',$data);
-	}
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store()
+    {
+        //
+    }
 
-	public function comments()
-	{
-		$com=Comment::viewAllComent();
-		return view('pages.user.Posts')->with('com',$com);
-	}
-	/**s
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
+    public function Posts()
+    {
+        $data = Submission::viewAllSubmission();
+        return view('pages.user.Posts')->with('data', $data);
+    }
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
+    public function comments()
+    {
+        $com = Comment::viewAllComent();
+        return view('pages.user.Posts')->with('com', $com);
+    }
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
+    /**s
+     * Display the specified resource.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        //
+    }
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function edit($id)
+    {
+        //
+    }
 
-	//update the current post
-	public function updatePost()
-	{
-		if(\Request::ajax()){
-			$data = \Input::all();
-			Submission::newPost($data);
-			echo $data['currentPost'];
-		}
-	}
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function update($id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+
+    //update the current post
+    public function updatePost()
+    {
+        if (\Request::ajax()) {
+            $data = \Input::all();
+            Submission::newPost($data);
+            echo $data['currentPost'];
+        }
+    }
 
 
+    public function likeIncrease()
+    {
+
+        if (\Input::ajax()) {
+            $data = \Input::all();
+
+            //		$input['post_id']=$request->input('id');
+//		$input['user_id']=$request->input('userid');
+//		$input['like']=true;
+//
+//		Like::create($input);
 
 
+            $like = new Like();
 
+            $like->user_id = $data['user_id'];
+            $like->post_id = $data['post_id'];
+            $like->like = true;
+
+            $like->save();
+
+            $currentLikes = DB::table('submissions')
+                ->select('no_of_votes')
+                ->where('id', '=', $data['post_id'])
+                ->get();
+
+            DB::table('submissions')
+                ->where('id', '=', $data['post_id'])
+                ->update(['no_of_votes' =>'$currentLikes'+1]);
+
+//            var_dump($data['like_count']);
+            $LikeCount = Like::where('like', '=', 1)->where('post_id', '=', $data['post_id'])->count();
+
+            echo $LikeCount . ' likes';
+
+        }
+
+    }
+
+    public function likeDecraese()
+    {
+        if (\Input::ajax()) {
+            $data = \Input::all();
+
+           $like=new Like();
+
+     //check whether he has liked before
+            $count=Like::where('user_id','=',$data['user_id'])
+                        ->where('post_id','=',$data['post_id'])
+                        ->count();
+
+            $like->user_id=$data['user_id'];
+            $like->post_id=$data['post_id'];
+            $like->like=false;
+            $like->save();
+
+            $currentDisLikes = DB::table('submissions')
+                ->select('no_of_dislikes')
+                ->where('id', '=', $data['post_id'])
+                ->get();
+
+            DB::table('submissions')
+                ->where('id', '=', $data['post_id'])
+                ->update(['no_of_dislikes' =>'$currentDisLikes'+1]);
+
+           $LikeCount=Like::where('like','=',0)->where('post_id','=',$data['post_id'])->count();
+           echo $LikeCount.' dislikes';
+
+        }
+
+    }
 
 }

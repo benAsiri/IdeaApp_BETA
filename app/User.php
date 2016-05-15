@@ -1,5 +1,6 @@
 <?php namespace App;
 
+use App\Like;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -48,5 +49,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->hasMany('App\Reward');
     }
 
+    public function likes()
+    {
+        return $this->hasMany('App\Like');
+    }
+
+    public function hasLikedStatus(Like $likes)
+    {
+//        return(bool) $likes->id
+//        where('user_id',\Auth::user()->id)
+
+    }
 
 }

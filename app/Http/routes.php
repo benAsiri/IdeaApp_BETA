@@ -46,3 +46,6 @@ Route::controllers([
 	
 ]);
 
+Route::post('likeIncrease', 'PagesController@likeIncrease');
+
+Route::post('likeDecrease','PagesController@likeDecraese');
