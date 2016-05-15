@@ -55,6 +55,7 @@
                                 </p>
                                 <div>&nbsp;</div>
                                 <div>
+
                                     <button class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
                                     <span class="pull-right text-muted">{{$d->no_of_votes}} likes - 3 comments</span>
                                 </div>
@@ -82,6 +83,7 @@
                                 <div>&nbsp;</div>
                                 <div>
                                     <button class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
+
                                     <span class="pull-right text-muted">{{$d->no_of_votes}} likes - 3 comments</span>
                                 </div>
                                 <div>&nbsp;</div>

@@ -74,32 +74,19 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <!-- /.col -->
                     <div class="col-xs-3">
                         <div class="col-xs-4">
                             <div class="col-xs-4">
-
-
-
-
                                 <button type="submit" class="btn btn-primary" style="margin-right: 50px;">Login</button>
-
-
-
-
                             </div>
                             <!-- /.col -->
                         </div>
-
-
                     </div>
                 </div>
-
             </div>
-
         </form>
 
 
@@ -122,7 +109,7 @@
             </p>
         </div>
 
-        <a href="{{asset('/emails/password')}}">Forgot Your Password?</a>
+        <a href="#" data-toggle="modal" data-target="#myModal">Forgot Your Password?</a>
         <a href="{{asset('/auth/register')}}" class="text-center">Register a new membership</a>
 
 
@@ -152,3 +139,64 @@
 
 </body>
 </html>
+
+
+
+<!-- Model for Rest Password-->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">RESET PASSWORD</h4>
+            </div>
+
+            <div class="form-group has-feedback">
+                <input placeholder="enter registered email" class="form-control" name="email"  type="email" value="" id="email"  />
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="getCode()" data-dismiss="modal">Send Verification code</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+
+
+    function getCode (){
+
+        $.ajaxSetup(
+                {
+                    headers: {
+                        'X-CSRF-Token': "{!! csrf_token() !!}"
+                    }
+                });
+
+        $.ajax({
+            method: "POST",
+            url: "/verificationCode",
+            data : { email: $('#email').val() },
+            success: function (data) {
+                alert(data);
+                window.location.href = "{{action('WelcomeController@resetPassword')}}"
+
+
+
+            },
+            error: function (data){
+
+            }
+
+        });
+
+    }
+</script>

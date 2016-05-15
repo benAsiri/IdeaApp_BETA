@@ -35,4 +35,30 @@ class WelcomeController extends Controller {
 			return view('auth.login');
 	}
 
+	public function getCode(){
+
+		$R= \Input::all();
+		if(\Request::ajax()){
+
+			$transport = \Swift_SmtpTransport::newInstance('stmp.gmail.com',465,'ssl')
+					->setUsername('namila.mail.tester@gmail.com')
+					->getPassword('0771950394');
+
+			$mailer = \Swift_Mailer::newInstance($transport);
+
+			$message =\Swift_Message::newInstance()
+				->setSubject('password')
+				->setFrom('namila.mail.tester@gmail.com','chalitha')
+				->setTo('chalithamaduranga123@gmail.com')
+				->setBody('Your Code is : '.rand(1000,4000));
+
+			$numSent = $mailer->send($message);
+			printf("Sent %d message\n", $numSent);
+		}
+
+	}
+
+	public function resetPassword(){
+		return view('auth.reset');
+	}
 }

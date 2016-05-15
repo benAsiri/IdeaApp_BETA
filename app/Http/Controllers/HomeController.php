@@ -34,9 +34,8 @@ class HomeController extends Controller {
 		if (Auth::user()->user_type == 'USER'){
 			return view('pages.user.adminstrative')->with('data',$data);
 		}elseif(Auth::user()->user_type == 'ADMIN'){
-			//return "OK"; Admin page comes here
-			return view('auth.login');
-
+			//redirects to Admin page
+			return view('pages.admin.ContentPage');
 		}
 	}
 

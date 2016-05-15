@@ -11,10 +11,14 @@
 	  	"willvincent/laravel-rateable": "~1.0",
 		"intervention/image": "^2.3"
 
+
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
-		"phpspec/phpspec": "~2.1"
+		"phpspec/phpspec": "~2.1",
+		"yozaz/laravel-swiftmailer": "~3.0",
+		"guzzlehttp/guzzle": "~5.3|~6.0"
+
 	},
 	"autoload": {
 		"classmap": [
@@ -46,6 +50,7 @@
 	"config": {
 		"preferred-install": "dist"
 	}
+
 
 
 }

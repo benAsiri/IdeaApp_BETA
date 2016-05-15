@@ -45,6 +45,9 @@ Route::get('SIS','PagesController@sis');
 
 Route::post('picture','ImageController@picture');
 
+Route::post('verificationCode','WelcomeController@getCode');
+
+Route::get('sendMail','WelcomeController@resetPassword');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
