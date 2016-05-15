@@ -81,11 +81,6 @@ class PagesController extends Controller
      *
      * @return Response
      */
-    public function store()
-    {
-        //
-    }
-
     public function Posts()
     {
         $data = Submission::viewAllSubmission();
