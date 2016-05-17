@@ -75,6 +75,49 @@ class PagesController extends Controller
 		//
 	}
 
+    // Add Like for the post
+    public function postAddLike(Request $request)
+    {
+        $submission = Submission::find($request['postId']);
+        $submission->no_of_votes = $submission->no_of_votes + 1;
+        $submission->update();
+        return response()->json(['new_likes' => $submission->no_of_votes], 200);
+    }
+
+    // Add Comment for the post
+    public function postAddComment(Request $request)
+    {
+        date_default_timezone_set("Asia/Colombo");
+        $comment = new Comment();
+        $comment->comment = $request['body'];
+        $comment->date = date('Y-m-d H:i:s');
+        $comment->no_of_votes = 1;
+
+        $submission = Submission::find($request['postId']);
+        $user = $request->user();
+
+        $comment->uid = $user->id;
+        $comment->pid = $submission->id;
+
+        $comment->save();
+
+        return response()->json(['message' => "Comment Added"], 200);
+    }
+
+    public function getCommentsForPost(Request $request)
+    {
+        $pid = $request['postId'];
+//      $comments = DB::table('comments')->where('pid',$pid)->get();
+
+        $comments = DB::table('users')
+            ->join('comments', 'users.id', '=', 'comments.uid')
+            ->select('users.name', 'comments.comment', 'comments.date')
+            ->where('comments.pid',$pid)
+            ->get();
+
+        return response()->json(['comments' => $comments], 200);
+    }
+
 
     /**
      * Store a newly created resource in storage.

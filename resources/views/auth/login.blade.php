@@ -156,9 +156,6 @@
             </div>
             <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-
-
-
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" onclick="getCode()" data-dismiss="modal">Send Verification code</button>
             </div>

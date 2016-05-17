@@ -464,6 +464,7 @@
 <script src="{{asset('/admin/dist/js/demo.js')}}"></script>
 
 <script src="{{asset('/admin/plugins/ionslider/ion.rangeSlider.min.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
 @show
 </body>
 </html>

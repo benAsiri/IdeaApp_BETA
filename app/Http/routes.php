@@ -59,3 +59,12 @@ Route::controllers([
 Route::post('likeIncrease', 'PagesController@likeIncrease');
 
 Route::post('likeDecrease','PagesController@likeDecraese');
+
+
+Route::any('like','PagesController@postAddLike');
+
+Route::any('addComment','PagesController@postAddComment');
+
+Route::get('getComments','PagesController@getCommentsForPost');
+
+Route::any('reward','RewardController@getLikesForSub');
