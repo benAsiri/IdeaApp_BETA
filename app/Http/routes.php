@@ -69,6 +69,12 @@ Route::get('getComments','PagesController@getCommentsForPost');
 
 Route::any('reward','RewardController@getLikesForSub');
 
+Route::any('comreward','RewardController@getLikesForCom');
+
+Route::post('givereward','RewardController@GiveSubReward');
+
+Route::post('givecomreward','RewardController@GiveComReward');
+
 
 
 Route::get('ManageUsers/AddUsers','adminPagesController@newUsers');

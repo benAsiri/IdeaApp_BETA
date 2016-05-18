@@ -41,10 +41,14 @@
                         $t=$d->id;
                         $t = $t%2;
                             ?>
+
                         @if($t == 0)
+
                     <li>
                         <div class="timeline-badge"><i class="glyphicon glyphicon-credit-card"></i></div>
-                        <div class="timeline-panel">
+
+                        <div class="timeline-panel" data-postid="{{ $d->id }}">
+
                             <div class="timeline-heading">
                                 <h4 class="timeline-title">{{$d->category}}</h4>
                                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on {{$d->date}} </i></small></p>
@@ -54,15 +58,18 @@
                                 <p>{{$d->post}}
                                 </p>
                                 <div>&nbsp;</div>
+
                                 <div>
 
                                     <button class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
                                     <span class="pull-right text-muted">{{$d->no_of_votes}} likes - 3 comments</span>
                                 </div>
                                 <div>&nbsp;</div>
+
                                 <form>
                                     <div class="img-push">
-                                        <button class="btn btn-block btn-info btn-sm">COMMENT ABOUT IT</button>
+                                        <button class="btn btn-block btn-danger btn-sm" id="commentButton">COMMENT ABOUT IT</button>
+                                        <button class="btn btn-block btn-success btn-sm" id="viewButton">VIEW ALL COMMENTS</button>
                                     </div>
                                 </form>
                             </div>
@@ -72,7 +79,7 @@
                            @if($t == 1)
                     <li class="timeline-inverted">
                         <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-                        <div class="timeline-panel">
+                        <div class="timeline-panel" data-postid="{{ $d->id }}">
                             <div class="timeline-heading">
                                 <h4 class="timeline-title">{{$d->category}}</h4>
                                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on {{$d->date}} </i></small></p>
@@ -90,7 +97,7 @@
                                 <form>
                                     <div class="img-push">
                                         <button class="btn btn-block btn-danger btn-sm" id="commentButton">COMMENT ABOUT IT</button>
-                                        <button class="btn btn-block btn-success btn-sm" id="viewButton">VIEW ALL COMMENTS</button
+                                        <button class="btn btn-block btn-success btn-sm" id="viewButton">VIEW ALL COMMENTS</button>
                                     </div>
                                 </form>
 

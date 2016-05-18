@@ -2,6 +2,8 @@
 
 use App\Comment;
 use App\Http\Requests;
+use App\Reward;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
 use App\Submission;
@@ -9,6 +11,7 @@ use App\User;
 use App\Like;
 use Illuminate\Support\Facades\Input;
 use willvincent\Rateable\Rateable;
+
 
 class PagesController extends Controller
 {
