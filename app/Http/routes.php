@@ -68,3 +68,11 @@ Route::any('addComment','PagesController@postAddComment');
 Route::get('getComments','PagesController@getCommentsForPost');
 
 Route::any('reward','RewardController@getLikesForSub');
+
+
+
+Route::get('ManageUsers/AddUsers','adminPagesController@newUsers');
+
+Route::get('ManageUsers/UpdateDetails', 'adminPagesController@updateUsersDetails');
+
+Route::get('Submissions/ResentPosts', 'adminPagesController@manageSubmissions');
