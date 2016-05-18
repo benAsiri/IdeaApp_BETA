@@ -216,6 +216,10 @@
                     <li><a href="{{action('adminPagesController@manageSubmissions')}}"><i class="fa fa-file-text" aria-hidden="true"></i>
                             <span>Manage Submissions</span></a>
 
+                        <a href="{{action('adminPagesController@loadRewards')}}"><i class="fa fa-fw fa-gift" aria-hidden="true"></i>
+                            <span>Rewards</span></a>
+
+
                     </li>
             </ul>
         </section>

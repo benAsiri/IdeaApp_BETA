@@ -5,6 +5,18 @@
 @stop
 
 @section('content')
+    <form method="POST" action="{{url('/sortSubmissions')}}" >
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
+        <label for="Manufacturer" > Show by </label>
+
+        <select id="Make" name="Make" >
+            <option value="select your option">select your option</option>
+            <option value="vote">Highest Liked</option>
+            <option value="most disliked">most disliked</option>
+        </select>
+
+        <input type="submit" name="search" value="Search" class="btn btn-sm btn-info btn-flat "/>
+    </form>
 
     @foreach($data as $value)
     <div class="modal-dialog">
@@ -13,7 +25,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
                             class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
-                <h4 class="modal-title">{{$value->category}}</h4>
+                <h3 class="timeline-title">{{$value->category}}</h3>
             </div>
             <div class="modal-body">
                 <img class="img-responsive pad" src="{{asset('Image/'.$value->Image)}}" alt="Photo">
@@ -22,8 +34,8 @@
             <div class="modal-footer">
                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on {{$value->date}} </i></small></p>
                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted by {{$value->name}} </i></small></p>
-                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-outline">Save changes</button>
+
+                <button type="button" class="btn btn-sm btn-info btn-flat pull-left">Delete this post</button>
             </div>
         </div>
         <!-- /.modal-content -->

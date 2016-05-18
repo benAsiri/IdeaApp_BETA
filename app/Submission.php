@@ -58,6 +58,22 @@ class Submission extends Model {
     }
 
 
+    public static function SortPostHighLikes()
+    {
+        $submission=DB::table('submissions')
+            ->join('users', 'users.id', '=', 'submissions.user_id')
+            ->select('users.name','submissions.user_id' ,'submissions.no_of_votes','submissions.id',
+                'submissions.post','submissions.category',
+                'submissions.no_of_dislikes','submissions.Image','submissions.date')
+            ->orderBy('no_of_votes', 'desc')
+            ->get();
+        return $submission;
+    }
+
+
+
+
+
     /*
     public static function newPost($data){
         //DB::insert('insert into submissions (cate,post) values (?, ?)', [1, 'Dayle']);

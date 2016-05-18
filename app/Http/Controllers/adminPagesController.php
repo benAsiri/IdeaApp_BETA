@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use App\Submission;
 use Illuminate\Http\Request;
+use DB;
 
 class adminPagesController extends Controller {
 
@@ -28,6 +29,50 @@ class adminPagesController extends Controller {
 		$data=Submission::AllSubmissionWithDetails();
 		return view('pages.admin.manageSubmissions')->with('data',$data);
 	}
+
+	public function loadRewards()
+	{
+		$data=Submission::AllSubmissionWithDetails();
+		return view('pages.admin.RewardsForSubmission')->with('data',$data);
+	}
+
+	public function GiveSubReward()
+	{
+		if(\Input::ajax())
+		{
+			$data=\Input::all();
+
+			$reward=new Reward();
+
+			$reward->uid=$data['user_id'];
+			$reward->description=$data['post_desc'];
+
+			$reward->save();
+
+			echo '';
+		}
+
+	}
+
+	public  function sortData (Request $request) {
+		$d=$request->Make;
+		if($d == "vote")
+		{
+			//$data=Submission::orderBy('no_of_votes','DESC')->get();
+
+			$data=Submission::SortPostHighLikes();
+		}
+
+
+		return view('pages.admin.manageSubmissions')->with('data', $data);
+	}
+
+
+
+
+
+
+
 
 
 	/**

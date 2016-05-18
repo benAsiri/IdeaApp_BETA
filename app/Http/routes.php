@@ -67,7 +67,9 @@ Route::any('addComment','PagesController@postAddComment');
 
 Route::get('getComments','PagesController@getCommentsForPost');
 
-Route::any('reward','RewardController@getLikesForSub');
+Route::any('givereward','adminPagesController@GiveSubReward');
+
+Route::get('loadrewards','adminPagesController@loadRewards');
 
 Route::any('comreward','RewardController@getLikesForCom');
 
@@ -82,3 +84,5 @@ Route::get('ManageUsers/AddUsers','adminPagesController@newUsers');
 Route::get('ManageUsers/UpdateDetails', 'adminPagesController@updateUsersDetails');
 
 Route::get('Submissions/ResentPosts', 'adminPagesController@manageSubmissions');
+
+Route::post('sortSubmissions','adminPagesController@sortData');
