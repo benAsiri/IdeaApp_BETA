@@ -214,7 +214,9 @@
                         </li>
 
                     <li><a href="{{action('adminPagesController@manageSubmissions')}}"><i class="fa fa-file-text" aria-hidden="true"></i>
-                            <span>Manage Submissions</span></a></li>
+                            <span>Manage Submissions</span></a>
+
+                    </li>
             </ul>
         </section>
         <!-- /.sidebar -->

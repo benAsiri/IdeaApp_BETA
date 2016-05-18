@@ -30,7 +30,7 @@ class HomeController extends Controller {
 	*/
 	public function index()
 	{
-		$data=Submission::all();
+		$data=Submission::AllSubmission();
 		if (Auth::user()->user_type == 'USER'){
 			return view('pages.user.adminstrative')->with('data',$data);
 		}elseif(Auth::user()->user_type == 'ADMIN'){

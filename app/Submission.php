@@ -33,7 +33,7 @@ class Submission extends Model {
 
     public static function AllSubmission()
     {
-        $submission=DB::table('submissions')->get();;
+        $submission=DB::table('submissions')->orderBy('date','desc')->get();
 
         return $submission;
     }
@@ -45,6 +45,17 @@ class Submission extends Model {
         return $submission;
     }
 
+    public static function AllSubmissionWithDetails()
+    {
+        $submission=DB::table('submissions')
+                    ->join('users', 'users.id', '=', 'submissions.user_id')
+                    ->select('users.name','submissions.user_id' ,'submissions.no_of_votes','submissions.id',
+                            'submissions.post','submissions.category',
+                            'submissions.no_of_dislikes','submissions.Image','submissions.date')
+                    ->orderBy('date', 'desc')
+                    ->get();
+        return $submission;
+    }
 
 
     /*

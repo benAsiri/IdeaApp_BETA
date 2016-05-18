@@ -10,7 +10,7 @@
     <link href="{{ asset('css/FrontEnd_css/wall.css') }}" rel="stylesheet" type="text/css">
 
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
 
             <div>
                 <ul class="timeline">
@@ -49,11 +49,11 @@
                                                 <span id="no_of_likes" data-temp="spam1" class="pull-right text-muted">{{$d->no_of_votes}}
                                                 likes -  {{$d->no_of_dislikes}}  dislikes</span>
                                         </div>
-                                        <div>&nbsp;</div>
+                                        {{--<div>&nbsp;</div>--}}
                                         <form>
                                             <div class="img-push">
-                                                <input class="form-control input-sm"
-                                                       placeholder="Press enter to post comment" type="text">
+                                                <button class="btn btn-block btn-danger btn-sm" id="commentButton">COMMENT ABOUT IT</button>
+                                                <button class="btn btn-block btn-success btn-sm" id="viewButton">VIEW ALL COMMENTS</button
                                             </div>
                                         </form>
                                     </div>
@@ -93,10 +93,11 @@
                                         <div>&nbsp;</div>
                                         <form>
                                             <div class="img-push">
-                                                <input class="form-control input-sm"
-                                                       placeholder="Press enter to post comment" type="text">
+                                                <button class="btn btn-block btn-danger btn-sm" id="commentButton">COMMENT ABOUT IT</button>
+                                                <button class="btn btn-block btn-success btn-sm" id="viewButton">VIEW ALL COMMENTS</button
                                             </div>
                                         </form>
+
 
                                     </div>
                                 </div>
@@ -115,6 +116,60 @@
         <!-- /.col -->
     </div><!-- /.row -->
 
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="comment-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Add Comment </h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" name="comment-body" id="comment-body" rows="2"> </textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="modal-save">Save changes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="view-comment-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">All comments for this post </h4>
+                    <h5 class="modal-title" id="commentCount"> </h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <table class="table table-bordered" id="commentBody">
+
+                            </table>
+
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     {{--<script>--}}
     {{--var urlLike='{{route('Like')}}';--}}
     {{--</script>--}}

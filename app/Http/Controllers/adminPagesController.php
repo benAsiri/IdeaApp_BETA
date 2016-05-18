@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Submission;
 use Illuminate\Http\Request;
 
 class adminPagesController extends Controller {
@@ -24,7 +25,8 @@ class adminPagesController extends Controller {
 	}
 
 	public function manageSubmissions(){
-		return view('pages.admin.manageSubmissions');
+		$data=Submission::AllSubmissionWithDetails();
+		return view('pages.admin.manageSubmissions')->with('data',$data);
 	}
 
 

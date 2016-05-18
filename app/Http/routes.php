@@ -76,7 +76,7 @@ Route::post('givereward','RewardController@GiveSubReward');
 Route::post('givecomreward','RewardController@GiveComReward');
 
 
-
+//Routing related to Admin Side
 Route::get('ManageUsers/AddUsers','adminPagesController@newUsers');
 
 Route::get('ManageUsers/UpdateDetails', 'adminPagesController@updateUsersDetails');
