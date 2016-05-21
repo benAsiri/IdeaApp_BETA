@@ -54,6 +54,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->hasMany('App\Like');
     }
 
+    public function notifications()
+    {
+        return $this->hasMany('App\Notification');
+    }
+
     public function hasLikedStatus(Like $likes)
     {
 //        return(bool) $likes->id

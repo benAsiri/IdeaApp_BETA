@@ -10,4 +10,9 @@ class Reward extends Model {
         return $this->belongsTo('App\User');
     }
 
+    public function notification()
+    {
+        return $this->hasOne('App/Notification');
+    }
+
 }
