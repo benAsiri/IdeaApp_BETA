@@ -71,7 +71,7 @@ Route::any('givereward','adminPagesController@GiveSubReward');
 
 Route::get('loadrewards','adminPagesController@loadRewards');
 
-Route::any('comreward','RewardController@getLikesForCom');
+Route::any('comreward','adminPagesController@getLikesForCom');
 
 Route::post('givereward','RewardController@GiveSubReward');
 
@@ -86,3 +86,8 @@ Route::get('ManageUsers/UpdateDetails', 'adminPagesController@updateUsersDetails
 Route::get('Submissions/ResentPosts', 'adminPagesController@manageSubmissions');
 
 Route::post('sortSubmissions','adminPagesController@sortData');
+
+Route::post('deletePost','adminPagesController@destroy');
+
+Route::post('createUserAccount','adminPagesController@createUser');
+

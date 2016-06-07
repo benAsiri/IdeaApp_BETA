@@ -198,7 +198,7 @@
     {{--all javascripts comes under master page comes here --}}
     <script>
 
-        //        Following ajax part is written to increment the like
+        // Following ajax part is written to increment the like
 
         $('.like').click(function () {
             var temp = $(this);

@@ -217,8 +217,9 @@
                             <span>Manage Submissions</span></a>
 
                         <a href="{{action('adminPagesController@loadRewards')}}"><i class="fa fa-fw fa-gift" aria-hidden="true"></i>
-                            <span>Rewards</span></a>
-
+                            <span>Reward for Submission</span></a>
+                        <a href="{{action('adminPagesController@getLikesForCom')}}"><i class="fa fa-fw fa-gift" aria-hidden="true"></i>
+                            <span>Reward for Comments</span></a>
 
                     </li>
 

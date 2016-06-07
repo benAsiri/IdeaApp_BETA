@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Submission;
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Input;
+use App\User;
 
 class adminPagesController extends Controller {
 
@@ -18,6 +20,14 @@ class adminPagesController extends Controller {
 	public function newUsers()
 	{
 		return view('pages.admin.addUsers');
+	}
+
+	public function createUser()
+	{
+
+
+
+
 	}
 
 	public function updateUsersDetails()
@@ -36,6 +46,22 @@ class adminPagesController extends Controller {
 		return view('pages.admin.RewardsForSubmission')->with('data',$data);
 	}
 
+	public function getLikesForCom(Request $request)
+	{
+		$pid = $request['postId'];
+
+		$comments = DB::table('users')
+			->join('comments', 'users.id', '=', 'comments.uid')
+			->join('submissions', 'users.id', '=', 'submissions.user_id')
+			->select('users.name','comments.uid' ,'comments.no_of_votes','comments.id','comments.comment' ,'submissions.post')
+			//->where('comments.pid',$pid)
+			//->paginate(10);
+			->orderBy('no_of_votes', 'desc')
+			->get();
+		//return $comments;
+		return view('pages.admin.RewardsForComment', compact('comments'));
+	}
+
 	public function GiveSubReward()
 	{
 		if(\Input::ajax())
@@ -46,6 +72,25 @@ class adminPagesController extends Controller {
 
 			$reward->uid=$data['user_id'];
 			$reward->description=$data['post_desc'];
+
+			$reward->save();
+
+			echo '';
+		}
+
+	}
+
+
+	public function GiveComReward()
+	{
+		if(\Input::ajax())
+		{
+			$data=\Input::all();
+
+			$reward=new Reward();
+
+			$reward->uid=$data['user_id'];
+			$reward->description=$data['comment_desc'];
 
 			$reward->save();
 
@@ -124,9 +169,16 @@ class adminPagesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+
+	/**
+	 * $id parameter delete fromdestroy
+	 */
+	public function destroy()
 	{
 		//
+		$id=\Input::all();
+		$data=Submission::find($id['pid']);
+
 	}
 
 }

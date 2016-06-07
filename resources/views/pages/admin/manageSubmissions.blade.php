@@ -34,8 +34,8 @@
             <div class="modal-footer">
                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted on {{$value->date}} </i></small></p>
                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"> Posted by {{$value->name}} </i></small></p>
-
-                <button type="button" class="btn btn-sm btn-info btn-flat pull-left">Delete this post</button>
+                <input type="hidden" id="dis" name="dis" value="{{$value->id}}"/>
+                <button type="button" id="btn" name="btn" class="btn btn-sm btn-info btn-flat pull-left">Delete this post</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -51,5 +51,25 @@
 
 @section('js_ref')
     @parent
-
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                var next=$(this).siblings('#dis').val();
+                var p = $(this).parent().parent();
+                $.ajax({
+                    method: "GET",
+                    url: "/deletePost",
+                    data : { pid : next },
+                    success: function (data) {
+                        p.hide();
+                        alert(data);
+                        //window.location.href = "{{action('WelcomeController@resetPassword')}}"
+                    },
+                    error: function (data){
+                        alert(data);
+                    }
+                })
+            })
+        });
+    </script>
 @stop
