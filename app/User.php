@@ -61,4 +61,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     }
 
+    public function Ratings()
+    {
+        return $this->hasOne('App\Ratings');
+    }
+
+    public static function getUsers(){
+        $user = User::all();
+        return $user;
+    }
+
 }

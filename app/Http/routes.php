@@ -69,9 +69,13 @@ Route::get('getComments','PagesController@getCommentsForPost');
 
 Route::any('reward','RewardController@getLikesForSub');
 
+Route::post('rating','RatingController@getRatings');
+
 
 
 Route::get('ManageUsers/AddUsers','adminPagesController@newUsers');
+
+Route::post('ManageUsers/AddUsers','adminPagesController@store');
 
 Route::get('ManageUsers/UpdateDetails', 'adminPagesController@updateUsersDetails');
 

@@ -175,7 +175,7 @@
                         <ul class="dropdown-menu">
                               <li class="user-footer">
                                 <div class="col-lg-pull-0">
-                                    <a href="auth/logout" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="{{url('auth/logout')}}" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>

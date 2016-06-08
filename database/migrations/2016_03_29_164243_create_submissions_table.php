@@ -20,6 +20,7 @@ class CreateSubmissionsTable extends Migration {
 			$table->dateTime('date');
 			$table->integer('no_of_votes');
 			$table->integer('no_of_dislikes');
+			$table->integer('rating');
 			$table->integer('user_id')->unsigned();
 			$table->timestamps();
 			$table->string('Imagepath');

@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="{{asset('/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
     {{--new content ares 2--}}
     <link href="{{ asset('css/FrontEnd_css/wall.css') }}" rel="stylesheet" type="text/css" >
+    {{--Rating CSS--}}
+    <link href="{{ asset('/admin/plugins/starratings/css/star-rating.css') }}" rel="stylesheet" type="text/css">
 
     <div class="row">
         <div class="col-md-12">
@@ -51,11 +53,9 @@
                             </div>
                             <div class="timeline-body">
                                 <img class="img-responsive pad" src="{{asset('Image/'.$d->Image)}}" alt="Photo">
-                                <p>{{$d->post}}
-                                </p>
+                                <p>{{$d->post}}</p>
                                 <div>&nbsp;</div>
                                 <div>
-
                                     <button class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
                                     <span class="pull-right text-muted">{{$d->no_of_votes}} likes - 3 comments</span>
                                 </div>
@@ -83,7 +83,6 @@
                                 <div>&nbsp;</div>
                                 <div>
                                     <button class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
-
                                     <span class="pull-right text-muted">{{$d->no_of_votes}} likes - 3 comments</span>
                                 </div>
                                 {{--<div>&nbsp;</div>--}}
@@ -93,9 +92,6 @@
                                         <button class="btn btn-block btn-success btn-sm" id="viewButton">VIEW ALL COMMENTS</button
                                     </div>
                                 </form>
-
-
-
                             </div>
                         </div>
                     </li>
@@ -177,5 +173,45 @@
     @parent
 
     {{--all javascripts comes under master page comes here --}}
+    <script src="{{asset('/admin/plugins/starratings/js/star-rating.js')}}"></script>
+    <script>
+        $(document).ready(function () {
 
+            $('#rateID').rating({
+                min:1,
+                max:5,
+                size:'xs'
+            });
+
+            $('#rateID').on('rating.change', function(event, value, caption) {
+                var p = $(this).parents('.timeline-panel');
+                console.log(p.find('#post_id').val());
+
+                $.ajaxSetup(
+                        {
+                            headers: {
+                                'X-CSRF-Token': "{!!csrf_token()!!}"
+                            }
+                        });
+
+                $.ajax({
+                    url: '/rating',
+                    type: 'post',
+                    data: {
+                        post_id: p.find('#post_id').val(),
+                        newRating: value,
+                    },
+
+                    success: function (data) {
+                        alert (data);
+                    },
+                    error: function (data) {
+
+                    },
+                });
+//
+            });
+
+        });
+    </script>
 @stop

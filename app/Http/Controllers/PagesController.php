@@ -40,6 +40,7 @@ class PagesController extends Controller
 	public function administrative()
 	{
 		$data = Submission::categoryViceSubmission('Administrative');
+
 		return view('pages.user.adminstrative')->with('data', $data);
 
     }
@@ -49,15 +50,20 @@ class PagesController extends Controller
 		return view('pages.user.payments')->with('data',$data);
 	}
 
+
+
 	public function sis(){
 		$data=Submission::categoryViceSubmission('SIS');
 		return view('pages.user.sis')->with('data',$data);
 	}
 
+
+
 	public function academicDiv(){
 		$data=Submission::categoryViceSubmission('Academic Division');
 		return view('pages.user.academicDivision')->with('data',$data);
 	}
+
 
 	public function CleanSer(){
 		$data=Submission::categoryViceSubmission('Academic Division');

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class Submission extends Model {
 
-	protected $fillable=['post','category','date','no_of_votes','user_id','no_of_dislikes'];
+	protected $fillable=['post','category','date','no_of_votes','user_id','no_of_dislikes','rating'];
 
     public function user()
     {
@@ -46,22 +46,10 @@ class Submission extends Model {
     }
 
 
-
-    /*
-    public static function newPost($data){
-        //DB::insert('insert into submissions (cate,post) values (?, ?)', [1, 'Dayle']);
-        $s = new Submission();
-        $s->post = $data['currentPost'];
-        $s->category= $data['currentCat'];
-        $s->user_id= \Auth::user()->id;
-        $s->date=Carbon::now();
-        $s->save();
-    }*/
-
-/*    public static function createSubmission(Request $request)
+    public function Ratings()
     {
-        $submission = new Submission();
-        return $submission;
-    } */
+        return $this->hasMany('App\Ratings');
+    }
+
 }
 

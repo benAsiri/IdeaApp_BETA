@@ -7,11 +7,7 @@
     <!--User Master Page -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     @section('css_ref')
-
-
-
-
-            <!-- Bootstrap 3.3.5 -->
+    <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{asset('admin/bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -22,6 +18,7 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{asset('admin/dist/css/skins/_all-skins.min.css')}}">
+
     @show
 
 
@@ -47,7 +44,6 @@
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg">HOME</span>
         </a>
-
 
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -76,7 +72,8 @@
                                     <li><!-- start message -->
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle"
+                                                <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}"
+                                                     class="img-circle"
                                                      alt="User Image">
                                             </div>
                                             <h4>
@@ -150,15 +147,17 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                           <span class="hidden-xs"><i class="fa fa-user" aria-hidden="false"></i>  {{Auth::user()->name}} 's Account </span>
+                            <span class="hidden-xs"><i class="fa fa-user"
+                                                       aria-hidden="false"></i> {{Auth::user()->name}}
+                                's Account </span>
                         </a>
                         <ul class="dropdown-menu">
-                              <li class="user-footer">
+                            <li class="user-footer">
                                 <div class="pull-left">
                                     <a href="{{action('HomeController@loadProfile')}}" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="auth/logout" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="{{url('auth/logout')}}" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -203,18 +202,29 @@
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
 
-                    {{--Add Ideas for the Page--}}
-                    <li><a href="{{action('PagesController@addIdea')}}"><i class="fa fa-download" aria-hidden="true"></i> <span>Add Idea</span></a></li>
-                    <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><span>Administrative</span></a></li>
-                    <li><a href="{{action('PagesController@academicDiv')}}"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><span>Academic Division</span></a>
-                    <li><a href="{{action('PagesController@CleanSer')}}"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><span>Cleaning Service</span></a>
-                    <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><span>Payments</span></a>
-                    <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> <span>SIS( Student Union )</span></a>
-                    <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><span>Payments Finance</span></a>
-                    <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><span>Payments Finance</span></a>
-                    <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><span>LABS</span></a>
-                    <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><span>Student Clubs</span></a>
-                 </ul>
+                {{--Add Ideas for the Page--}}
+                <li><a href="{{action('PagesController@addIdea')}}"><i class="fa fa-download" aria-hidden="true"></i>
+                        <span>Add Idea</span></a></li>
+                <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o"
+                                                                              aria-hidden="true"></i><span>Administrative</span></a>
+                </li>
+                <li><a href="{{action('PagesController@academicDiv')}}"><i class="fa fa-dot-circle-o"
+                                                                           aria-hidden="true"></i><span>Academic Division</span></a>
+                <li><a href="{{action('PagesController@CleanSer')}}"><i class="fa fa-dot-circle-o"
+                                                                        aria-hidden="true"></i><span>Cleaning Service</span></a>
+                <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o"
+                                                                              aria-hidden="true"></i><span>Payments</span></a>
+                <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o"
+                                                                              aria-hidden="true"></i> <span>SIS( Student Union )</span></a>
+                <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o"
+                                                                              aria-hidden="true"></i><span>Payments Finance</span></a>
+                <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o"
+                                                                              aria-hidden="true"></i><span>Payments Finance</span></a>
+                <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o"
+                                                                              aria-hidden="true"></i><span>LABS</span></a>
+                <li><a href="{{action('PagesController@administrative')}}"><i class="fa fa-dot-circle-o"
+                                                                              aria-hidden="true"></i><span>Student Clubs</span></a>
+            </ul>
         </section>
         <!-- /.sidebar -->
     </aside>
@@ -229,10 +239,6 @@
         </section>
 
 
-
-
-
-
         <!-- Main content -->
         <section class="content">
 
@@ -244,26 +250,20 @@
     <!-- /.content-wrapper -->
 
 
-
-
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2014-2015 <a href="https://oasis.curtin.edu.au/">Curtin Univercity - THINK IT &copy;</a>.</strong> All rights
+        <strong>Copyright &copy; 2014-2015 <a href="https://oasis.curtin.edu.au/">Curtin Univercity - THINK
+                IT &copy;</a>.</strong> All rights
         reserved.
     </footer>
-
-
-
 
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
         <!-- Create the tabs -->
         <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-            {{--<li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>--}}
-            {{--<li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>--}}
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
@@ -274,76 +274,6 @@
             <!-- /.tab-pane -->
             <!-- Stats tab content -->
             <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-            <!-- /.tab-pane -->
-            <!-- Settings tab content -->
-            {{--<div class="tab-pane" id="control-sidebar-settings-tab">--}}
-                {{--<form method="post">--}}
-                    {{--<h3 class="control-sidebar-heading">General Settings</h3>--}}
-
-                    {{--<div class="form-group">--}}
-                        {{--<label class="control-sidebar-subheading">--}}
-                            {{--Report panel usage--}}
-                            {{--<input type="checkbox" class="pull-right" checked>--}}
-                        {{--</label>--}}
-
-                        {{--<p>--}}
-                            {{--Some information about this general settings option--}}
-                        {{--</p>--}}
-                    {{--</div>--}}
-                    {{--<!-- /.form-group -->--}}
-
-                    {{--<div class="form-group">--}}
-                        {{--<label class="control-sidebar-subheading">--}}
-                            {{--Allow mail redirect--}}
-                            {{--<input type="checkbox" class="pull-right" checked>--}}
-                        {{--</label>--}}
-
-                        {{--<p>--}}
-                            {{--Other sets of options are available--}}
-                        {{--</p>--}}
-                    {{--</div>--}}
-                    {{--<!-- /.form-group -->--}}
-
-                    {{--<div class="form-group">--}}
-                        {{--<label class="control-sidebar-subheading">--}}
-                            {{--Expose author name in posts--}}
-                            {{--<input type="checkbox" class="pull-right" checked>--}}
-                        {{--</label>--}}
-
-                        {{--<p>--}}
-                            {{--Allow the user to show his name in blog posts--}}
-                        {{--</p>--}}
-                    {{--</div>--}}
-                    {{--<!-- /.form-group -->--}}
-
-                    {{--<h3 class="control-sidebar-heading">Chat Settings</h3>--}}
-
-                    {{--<div class="form-group">--}}
-                        {{--<label class="control-sidebar-subheading">--}}
-                            {{--Show me as online--}}
-                            {{--<input type="checkbox" class="pull-right" checked>--}}
-                        {{--</label>--}}
-                    {{--</div>--}}
-                    {{--<!-- /.form-group -->--}}
-
-                    {{--<div class="form-group">--}}
-                        {{--<label class="control-sidebar-subheading">--}}
-                            {{--Turn off notifications--}}
-                            {{--<input type="checkbox" class="pull-right">--}}
-                        {{--</label>--}}
-                    {{--</div>--}}
-                    {{--<!-- /.form-group -->--}}
-
-                    {{--<div class="form-group">--}}
-                        {{--<label class="control-sidebar-subheading">--}}
-                            {{--Delete chat history--}}
-                            {{--<a href="javascript:" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>--}}
-                        {{--</label>--}}
-                    {{--</div>--}}
-                    {{--<!-- /.form-group -->--}}
-                {{--</form>--}}
-            {{--</div>--}}
-            <!-- /.tab-pane -->
         </div>
     </aside>
     <!-- /.control-sidebar -->
@@ -355,8 +285,11 @@
 
 <!-- ./wrapper -->
 @section('js_ref')
-        <!-- jQuery 2.1.4 -->
+
+
+<!-- jQuery 2.1.4 -->
 <script src="{{asset('/admin/plugins/jQuery/jQuery-2.1.4.min.js')}}"></script>
+
 <!-- Bootstrap 3.3.5 -->
 <script src="{{asset('/admin/bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- SlimScroll -->
@@ -370,6 +303,9 @@
 
 <script src="{{asset('/admin/plugins/ionslider/ion.rangeSlider.min.js')}}"></script>
 <script src="{{asset('js/app.js')}}"></script>
+
+
+
 @show
 </body>
 </html>

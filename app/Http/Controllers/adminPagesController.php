@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class adminPagesController extends Controller {
@@ -33,9 +34,35 @@ class adminPagesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$user = User::getUsers();
+//		$this->validate($request , [
+//			"name" => "required"
+//
+//		]);
+		/*
+		$rules = [
+			'name' => 'required',
+			'email' => 'required',
+			'password' => 'required'
+		];
+
+		$validator = Validator::make(Input::all(), $rules);
+		if ($validator->fails()) {
+			return back()->withErrors($validator)->withErrors($validator)->withInput();
+		}
+*/
+		$user = new User();
+
+		$user->name = $request->name;
+		$user->email= $request->email;
+		$user->password = bcrypt($request->password);
+		$user->user_type = $request->cat;
+
+		$user->save();
+
+		return back();
 	}
 
 	/**
@@ -81,5 +108,6 @@ class adminPagesController extends Controller {
 	{
 		//
 	}
+
 
 }
